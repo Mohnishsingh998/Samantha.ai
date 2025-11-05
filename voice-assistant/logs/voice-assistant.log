@@ -1,0 +1,5 @@
+2025-11-05 13:26:04.227 [com.mohnish.voiceassistant.audio.MicrophoneTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-05 13:26:06.648 [com.mohnish.voiceassistant.audio.MicrophoneTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-05 13:26:11.694 [com.mohnish.voiceassistant.audio.MicrophoneTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
+2025-11-05 13:26:11.710 [com.mohnish.voiceassistant.audio.MicrophoneTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Audio saved to: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/test-recording.wav
+2025-11-05 13:26:20.012 [com.mohnish.voiceassistant.audio.MicrophoneTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
