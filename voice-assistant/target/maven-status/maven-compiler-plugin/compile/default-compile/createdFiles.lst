@@ -1,4 +1,6 @@
-com/mohnish/voiceassistant/utils/AudioUtils.class
-com/mohnish/voiceassistant/audio/MicrophoneCapture.class
+com/mohnish/voiceassistant/audio/MacOSSTTEngine.class
 com/mohnish/voiceassistant/audio/MicrophoneTest.class
 com/mohnish/voiceassistant/App.class
+com/mohnish/voiceassistant/utils/AudioUtils.class
+com/mohnish/voiceassistant/audio/MacOSSTTTest.class
+com/mohnish/voiceassistant/audio/MicrophoneCapture.class
