@@ -20,29 +20,21 @@
     </properties>
 
     <dependencies>
-        <!-- ✅ Vosk Speech Recognition -->
-        <!-- <dependency>
-            <groupId>com.alphacephei</groupId>
-            <artifactId>vosk</artifactId>
-            <version>0.3.42</version>
-        </dependency> -->
-
-
-        <!-- ✅ JNA for native library support -->
+        <!-- JNA for native library support -->
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.14.0</version>
         </dependency>
 
-        <!-- ✅ JSON Processing (Gson) -->
+        <!-- JSON Processing (Gson) -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
 
-        <!-- ✅ Logging -->
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -55,14 +47,14 @@
             <version>1.4.11</version>
         </dependency>
 
-        <!-- ✅ Apache Commons Lang -->
+        <!-- Apache Commons Lang -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.13.0</version>
         </dependency>
 
-        <!-- ✅ JUnit Testing -->
+        <!-- JUnit Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -73,8 +65,7 @@
 
     <build>
         <plugins>
-
-            <!-- ✅ Maven Compiler Plugin -->
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -85,14 +76,14 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ Maven Exec Plugin (for running directly with mvn exec:java) -->
+            <!-- Maven Exec Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.6.2</version>
                 <configuration>
-                    <mainClass>com.mohnish.voiceassistant.audio.MacOSSTTTest</mainClass>
-                    <!-- Optional: automatically set native lib path -->
+                    <!-- ✅ CHANGED: Use EnhancedVoiceLoopTest as default -->
+                    <mainClass>com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest</mainClass>
                     <systemProperties>
                         <systemProperty>
                             <key>java.library.path</key>
@@ -102,7 +93,7 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ Maven Shade Plugin (create runnable JAR) -->
+            <!-- Maven Shade Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
