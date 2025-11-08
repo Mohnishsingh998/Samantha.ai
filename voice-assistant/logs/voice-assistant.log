@@ -1,58 +1,95 @@
-2025-11-07 08:11:53.231 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-07 08:11:53.238 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-07 08:11:53.238 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-07 08:18:45.545 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-07 08:18:45.549 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-07 08:18:45.549 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-07 08:18:48.278 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:18:53.301 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
-2025-11-07 08:18:53.306 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-14252533372928923608.wav
-2025-11-07 08:18:55.389 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how r u'
-2025-11-07 08:19:34.376 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:19:39.423 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 163200 bytes
-2025-11-07 08:19:39.426 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-12487971491835664578.wav
-2025-11-07 08:19:40.858 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how are you'
-2025-11-07 08:20:07.065 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-07 08:20:07.068 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-07 08:20:07.068 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-07 08:20:10.443 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:20:15.490 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-07 08:20:15.496 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-6160780815368991724.wav
-2025-11-07 08:20:16.805 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how r u'
-2025-11-07 08:20:59.433 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-07 08:20:59.435 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-07 08:20:59.435 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-07 08:21:06.979 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:21:12.039 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-07 08:21:12.041 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-2465477139860260209.wav
-2025-11-07 08:21:13.228 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is your name'
-2025-11-07 08:25:28.013 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
-2025-11-07 08:25:28.155 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-07 08:25:28.159 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-07 08:25:28.159 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-07 08:25:28.160 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your voice assistant. Press enter to start talking with me.'
-2025-11-07 08:25:32.958 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:25:52.982 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-07 08:25:54.647 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:25:54.807 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:25:59.844 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
-2025-11-07 08:25:59.850 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-2168057264314666269.wav
-2025-11-07 08:26:01.184 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is your name'
-2025-11-07 08:26:01.185 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I am your personal voice assistant. You can call me Assistant.'
-2025-11-07 08:26:05.209 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:26:20.504 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-07 08:26:22.188 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:26:22.338 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:26:27.387 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 163200 bytes
-2025-11-07 08:26:27.391 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-683090975104621291.wav
-2025-11-07 08:26:28.832 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'thank you'
-2025-11-07 08:26:28.832 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'You're very welcome! Happy to help.'
-2025-11-07 08:26:31.685 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:26:34.530 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-07 08:26:36.194 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-07 08:26:36.344 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-07 08:26:41.381 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-07 08:26:41.386 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-5359292494908751761.wav
-2025-11-07 08:26:42.660 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'how are you'
-2025-11-07 08:26:42.661 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm doing great! Thanks for asking. How are you?'
-2025-11-07 08:26:46.374 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:28:58.819 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
+2025-11-08 10:28:58.989 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-08 10:28:58.993 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-08 10:28:58.993 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-08 10:28:58.993 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your voice assistant. Press enter to start talking with me.'
+2025-11-08 10:29:04.011 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:34:51.096 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Initializing Voice Assistant...
+2025-11-08 10:34:51.254 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-08 10:34:51.260 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-08 10:34:51.260 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-08 10:34:51.260 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
+2025-11-08 10:34:51.373 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
+2025-11-08 10:34:51.374 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
+2025-11-08 10:34:51.374 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Smart LLM Router initialized
+2025-11-08 10:34:51.374 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Voice Assistant initialized successfully!
+2025-11-08 10:34:51.375 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-08 10:34:52.705 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
+2025-11-08 10:34:52.706 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-08 10:34:59.465 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (31 chars)
+2025-11-08 10:34:59.466 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your AI voice assistant. I can answer any question you have. Press enter to start.'
+2025-11-08 10:35:07.955 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:35:10.080 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-08 10:35:11.726 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:35:11.876 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-08 10:35:16.923 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-08 10:35:16.930 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-4986546213265439790.wav
+2025-11-08 10:35:19.473 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is machine learning'
+2025-11-08 10:35:19.474 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #1
+2025-11-08 10:35:19.924 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
+2025-11-08 10:35:19.924 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-08 10:35:20.449 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (290 chars)
+2025-11-08 10:35:20.449 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 525ms
+2025-11-08 10:35:20.450 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: '**Machine Learning (ML)**: A subset of artificial intelligence (AI) that involves training algorithms to learn from data and make predictions or decisions without being explicitly programmed. It enables systems to improve their performance on a task over time, based on experience and data.'
+2025-11-08 10:35:36.750 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:35:43.453 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-08 10:35:45.134 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:35:45.279 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-08 10:35:50.316 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-08 10:35:50.321 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-11244180068974441317.wav
+2025-11-08 10:35:51.630 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is Instagram'
+2025-11-08 10:35:51.631 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #2
+2025-11-08 10:35:52.099 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
+2025-11-08 10:35:52.100 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-08 10:35:52.572 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (313 chars)
+2025-11-08 10:35:52.572 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 472ms
+2025-11-08 10:35:52.573 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Instagram is a social media platform where users can share photos, videos, and stories, and follow others to see their content. It's owned by Meta and has over 2 billion active users. Users can post, like, comment, and engage with others' content, and also use features like hashtags, reels, and direct messaging.'
+2025-11-08 10:36:11.407 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:36:18.943 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-08 10:36:20.635 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:36:20.786 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-08 10:36:25.824 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-08 10:36:25.827 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-17224530560070957347.wav
+2025-11-08 10:36:28.103 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what do you know about me'
+2025-11-08 10:36:28.104 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #3
+2025-11-08 10:36:29.100 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
+2025-11-08 10:36:29.100 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-08 10:36:29.504 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (246 chars)
+2025-11-08 10:36:29.505 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 405ms
+2025-11-08 10:36:29.505 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I don't have any personal information about you. I'm a text-based AI assistant, and our conversation just started. I don't retain any data about users, so each time you interact with me, it's a new conversation. What would you like to talk about?'
+2025-11-08 10:36:43.559 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:36:45.874 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-08 10:36:47.529 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:36:47.680 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-08 10:36:52.718 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 163200 bytes
+2025-11-08 10:36:52.722 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-13262793565988785610.wav
+2025-11-08 10:36:54.306 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'can you tell me about your recently asked question which I told you'
+2025-11-08 10:36:54.307 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #4
+2025-11-08 10:36:54.749 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
+2025-11-08 10:36:54.750 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-08 10:36:55.151 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (138 chars)
+2025-11-08 10:36:55.152 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 402ms
+2025-11-08 10:36:55.152 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'This is the beginning of our conversation, and you haven't asked me a question yet. I'm ready to help, though. What would you like to ask?'
+2025-11-08 10:37:02.930 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:37:09.436 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Prefer local mode: true
+2025-11-08 10:37:09.437 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Switched to local mode'
+2025-11-08 10:37:11.589 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:37:13.885 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-08 10:37:15.540 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:37:15.684 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-08 10:37:20.722 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-08 10:37:20.726 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-14207747283102812661.wav
+2025-11-08 10:37:21.942 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is machine learning'
+2025-11-08 10:37:21.942 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #5
+2025-11-08 10:37:21.942 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🏠 Using Ollama (local)...
+2025-11-08 10:37:21.942 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-08 10:37:24.688 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (277 chars)
+2025-11-08 10:37:24.689 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Ollama response received in 2747ms
+2025-11-08 10:37:24.689 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Machine learning (ML) is a type of artificial intelligence (AI) that enables systems to automatically learn and improve from data without being explicitly programmed. It allows algorithms to identify patterns, make predictions, and refine their performance based on experience.'
+2025-11-08 10:37:40.565 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:37:46.504 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Goodbye! It was great talking with you.'
+2025-11-08 10:37:49.616 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-08 10:37:49.617 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleaning up resources...
+2025-11-08 10:37:49.627 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
+2025-11-08 10:37:49.641 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - STT Engine closed
+2025-11-08 10:37:49.641 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleanup complete

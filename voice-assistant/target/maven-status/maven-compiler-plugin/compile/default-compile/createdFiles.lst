@@ -1,8 +1,13 @@
-com/mohnish/voiceassistant/audio/EnhancedVoiceLoopTest.class
 com/mohnish/voiceassistant/audio/MacOSSTTEngine.class
+com/mohnish/voiceassistant/App.class
+com/mohnish/voiceassistant/llm/SmartLLMRouter.class
+com/mohnish/voiceassistant/llm/OllamaClient.class
+com/mohnish/voiceassistant/llm/GroqClient.class
+com/mohnish/voiceassistant/audio/EnhancedVoiceLoopTest.class
 com/mohnish/voiceassistant/audio/TTSTest.class
 com/mohnish/voiceassistant/audio/MicrophoneTest.class
-com/mohnish/voiceassistant/App.class
+com/mohnish/voiceassistant/llm/LLMTest.class
+com/mohnish/voiceassistant/VoiceAssistant.class
 com/mohnish/voiceassistant/utils/AudioUtils.class
 com/mohnish/voiceassistant/audio/MacOSTTSEngine.class
 com/mohnish/voiceassistant/audio/MacOSSTTTest.class

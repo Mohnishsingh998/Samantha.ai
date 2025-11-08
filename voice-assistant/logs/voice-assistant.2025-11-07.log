@@ -1,0 +1,58 @@
+2025-11-07 08:11:53.231 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-07 08:11:53.238 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-07 08:11:53.238 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-07 08:18:45.545 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-07 08:18:45.549 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-07 08:18:45.549 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-07 08:18:48.278 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:18:53.301 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
+2025-11-07 08:18:53.306 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-14252533372928923608.wav
+2025-11-07 08:18:55.389 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how r u'
+2025-11-07 08:19:34.376 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:19:39.423 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 163200 bytes
+2025-11-07 08:19:39.426 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-12487971491835664578.wav
+2025-11-07 08:19:40.858 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how are you'
+2025-11-07 08:20:07.065 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-07 08:20:07.068 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-07 08:20:07.068 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-07 08:20:10.443 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:20:15.490 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-07 08:20:15.496 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-6160780815368991724.wav
+2025-11-07 08:20:16.805 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'hello how r u'
+2025-11-07 08:20:59.433 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-07 08:20:59.435 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-07 08:20:59.435 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-07 08:21:06.979 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:21:12.039 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-07 08:21:12.041 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-2465477139860260209.wav
+2025-11-07 08:21:13.228 [com.mohnish.voiceassistant.audio.MacOSSTTTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is your name'
+2025-11-07 08:25:28.013 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
+2025-11-07 08:25:28.155 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-07 08:25:28.159 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-07 08:25:28.159 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-07 08:25:28.160 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your voice assistant. Press enter to start talking with me.'
+2025-11-07 08:25:32.958 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:25:52.982 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-07 08:25:54.647 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:25:54.807 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:25:59.844 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
+2025-11-07 08:25:59.850 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-2168057264314666269.wav
+2025-11-07 08:26:01.184 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is your name'
+2025-11-07 08:26:01.185 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I am your personal voice assistant. You can call me Assistant.'
+2025-11-07 08:26:05.209 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:26:20.504 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-07 08:26:22.188 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:26:22.338 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:26:27.387 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 163200 bytes
+2025-11-07 08:26:27.391 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-683090975104621291.wav
+2025-11-07 08:26:28.832 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'thank you'
+2025-11-07 08:26:28.832 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'You're very welcome! Happy to help.'
+2025-11-07 08:26:31.685 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:26:34.530 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-07 08:26:36.194 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-07 08:26:36.344 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-07 08:26:41.381 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
+2025-11-07 08:26:41.386 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-5359292494908751761.wav
+2025-11-07 08:26:42.660 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'how are you'
+2025-11-07 08:26:42.661 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm doing great! Thanks for asking. How are you?'
+2025-11-07 08:26:46.374 [com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully

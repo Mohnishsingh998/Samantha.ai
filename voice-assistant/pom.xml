@@ -83,7 +83,7 @@
                 <version>3.6.2</version>
                 <configuration>
                     <!-- ✅ CHANGED: Use EnhancedVoiceLoopTest as default -->
-                    <mainClass>com.mohnish.voiceassistant.audio.EnhancedVoiceLoopTest</mainClass>
+                    <mainClass>com.mohnish.voiceassistant.VoiceAssistant</mainClass>
                     <systemProperties>
                         <systemProperty>
                             <key>java.library.path</key>
