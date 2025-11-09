@@ -1,0 +1,65 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.log
+
+# Maven
+.mvn/
+mvn.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Logs
+logs/
+*.log
+
+# Audio files (temporary)
+*.wav
+*.mp3
+test-recording.wav
+
+# Environment
+.env
+*.key
+.envrc
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# ChromaDB (for Week 2)
+chroma_data/
+
+# Vosk models (too large for git)
+models/vosk-*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
