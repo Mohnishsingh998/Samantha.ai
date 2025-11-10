@@ -1,4 +1,4 @@
-# 🤖 AI Voice Assistant
+# 🤖 Samantha.ai – AI Voice Assistant
 
 **An intelligent voice-activated assistant built from scratch in one week.**
 
@@ -14,44 +14,29 @@ A fully functional AI-powered voice assistant that can answer any question using
 
 ### ✨ Key Features
 
-- 🎤 **Natural Voice Input** - Speak your questions naturally
-- 🤖 **Intelligent AI** - Powered by Groq (cloud) and Ollama (local)
-- 🔊 **Voice Output** - Natural-sounding text-to-speech responses
-- 🔄 **Smart Routing** - Automatic fallback when offline
-- ⚙️ **Configurable** - Easy customization via config file
-- 📊 **Performance Monitoring** - Track response times and usage
-- 🛡️ **Error Recovery** - Graceful handling with helpful messages
-
----
-
-## 🎬 Demo
-
-**[Link to demo video]** *(Upload your video to YouTube/Vimeo and add link)*
-
-### Quick Demo:
-```
-You: "What is artificial intelligence?"
-Assistant: [Speaks intelligent answer aloud]
-
-You: "Explain quantum physics simply"
-Assistant: [Provides clear explanation]
-```
+- 🎤 **Natural Voice Input** – Speak your questions naturally  
+- 🤖 **Intelligent AI** – Powered by Groq (cloud) and Ollama (local)  
+- 🔊 **Voice Output** – Natural-sounding text-to-speech responses  
+- 🔄 **Smart Routing** – Automatic fallback when offline  
+- ⚙️ **Configurable** – Easy customization via config file  
+- 📊 **Performance Monitoring** – Track response times and usage  
+- 🛡️ **Error Recovery** – Graceful handling with helpful messages  
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- macOS (tested on macOS 13+)
-- Java 17+
-- Python 3 with `SpeechRecognition` library
+- macOS (tested on macOS 13+)  
+- Java 17+  
+- Python 3 with `SpeechRecognition` library  
 - Groq API key ([get free key](https://console.groq.com))
 
 ### Installation
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/voice-assistant.git
-cd voice-assistant
+git clone https://github.com/Mohnishsingh998/Samantha.ai.git
+cd Samantha.ai
 
 # 2. Install Python dependency
 pip3 install SpeechRecognition
@@ -180,17 +165,6 @@ mvn exec:java -Dexec.mainClass="com.mohnish.voiceassistant.llm.LLMTest"
 # Run full suite
 mvn test
 ```
-
----
-
-## 📖 Documentation
-
-- [User Guide](docs/USER_GUIDE.md) - Complete usage instructions
-- [Architecture](docs/ARCHITECTURE.md) - Technical details *(optional)*
-- [API Documentation](docs/API.md) - Code documentation *(optional)*
-
----
-
 ## 🛠️ Troubleshooting
 
 ### Common Issues
@@ -262,18 +236,13 @@ This is a personal learning project, but suggestions are welcome!
 
 ---
 
-## 📄 License
-
-MIT License - feel free to use this project for learning!
-
 ---
 
 ## 👤 Author
 
 **Mohnish Singh Yadav**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Portfolio: [your-portfolio.com](https://your-portfolio.com)
+- GitHub: [@Mohnishsingh998]((https://github.com/Mohnishsingh998))
+- LinkedIn: [mohnishsingh](https://www.linkedin.com/in/mohnishsingh-yadav-86916b257/)
 
 ---
 
@@ -289,21 +258,7 @@ MIT License - feel free to use this project for learning!
 
 ## ⭐ Star this repository if you found it helpful!
 
-**Built with ❤️ and lots of ☕**
-
 ---
-
-## 📸 Screenshots
-
-### Startup Screen
-![Startup](screenshots/startup.png) *(Add screenshots on Day 7)*
-
-### In Action
-![Demo](screenshots/demo.png)
-
-### Configuration
-![Config](screenshots/config.png)
-
 ---
 
 **Questions? Open an issue or reach out!**
