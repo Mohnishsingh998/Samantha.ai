@@ -1,19 +1,32 @@
-# Java
+# =====================================================
+# 🧠 Samantha.ai / Voice Assistant Project .gitignore
+# =====================================================
+
+# -----------------------------
+# 🧩 Java build artifacts
+# -----------------------------
 *.class
 *.jar
 *.war
 *.ear
-target/
 *.log
+target/
+dependency-reduced-pom.xml
 
-# Maven
+# -----------------------------
+# 🧰 Maven
+# -----------------------------
 .mvn/
-mvn.cmd
+mvnw
+mvnw.cmd
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
+release.properties
 
-# IDE
+# -----------------------------
+# 💻 IDE / Editor configs
+# -----------------------------
 .idea/
 *.iml
 .vscode/
@@ -24,43 +37,111 @@ pom.xml.versionsBackup
 *.swo
 *~
 
-# macOS
+# -----------------------------
+# 🍏 macOS junk
+# -----------------------------
 .DS_Store
 ._*
 .Spotlight-V100
 .Trashes
 
-# Logs
+# -----------------------------
+# 🪵 Logs
+# -----------------------------
 logs/
 *.log
+voice-assistant/logs/
+voice-assistant/logs/*.log
 
-# Audio files (temporary)
+# -----------------------------
+# 🔊 Audio / Test recordings
+# -----------------------------
 *.wav
 *.mp3
 test-recording.wav
 
-# Environment
+# -----------------------------
+# 🔐 Environment & API keys
+# -----------------------------
 .env
+.env.*
 *.key
 .envrc
 
-# Temporary files
+# -----------------------------
+# 🗂️ Temporary & cache files
+# -----------------------------
 temp/
 tmp/
 *.tmp
-
-# ChromaDB data
-chroma_data/
-
-# Vosk models (too large)
-models/vosk-*/
-
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
-.Python
-venv/
 
-# Books (your PDFs - optional, uncomment if you want to exclude)
-books/
+# -----------------------------
+# 🧱 Virtual environments
+# -----------------------------
+.venv/
+venv/
+env/
+env.bak/
+
+# -----------------------------
+# 🧠 ChromaDB / Local embeddings
+# -----------------------------
+chroma_data/
+voice-assistant/chroma_data/
+
+# -----------------------------
+# 🗣️ Speech recognition models
+# (avoid committing large model directories)
+# -----------------------------
+voice-assistant/models/
+voice-assistant/models/vosk-*/
+
+# -----------------------------
+# 📚 Books / PDFs / Documents
+# -----------------------------
+voice-assistant/books/
+*.pdf
+*.epub
+*.docx
+*.pptx
+*.zip
+
+# -----------------------------
+# 🧾 Generated documentation
+# -----------------------------
+voice-assistant/docs/
+docs/
+*.md.html
+
+# -----------------------------
+# ⚙️ OS / System files
+# -----------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -----------------------------
+# 🧪 Test reports / Build outputs
+# -----------------------------
+*.class
+*.coverage
+*.exec
+*.out
+*.log
+*.tmp
+*.bak
+*.orig
+
+# -----------------------------
+# 🚫 Misc large / transient artifacts
+# -----------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.iso
+*.dmg
