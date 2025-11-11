@@ -1,148 +1,16 @@
-# =====================================================
-# 🧠 Samantha.ai / Voice Assistant Project .gitignore
-# =====================================================
-
-# -----------------------------
-# 🧩 Java build artifacts
-# -----------------------------
 *.class
 *.jar
 *.war
-*.ear
-*.log
 target/
-dependency-reduced-pom.xml
-
-# -----------------------------
-# 🧰 Maven
-# -----------------------------
-.mvn/
-mvnw
-mvnw.cmd
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-release.properties
-
-# -----------------------------
-# 💻 IDE / Editor configs
-# -----------------------------
+*.log
 .idea/
 *.iml
 .vscode/
-.settings/
-.project
-.classpath
-*.swp
-*.swo
-*~
-
-# -----------------------------
-# 🍏 macOS junk
-# -----------------------------
 .DS_Store
-._*
-.Spotlight-V100
-.Trashes
-
-# -----------------------------
-# 🪵 Logs
-# -----------------------------
-logs/
-*.log
-voice-assistant/logs/
-voice-assistant/logs/*.log
-
-# -----------------------------
-# 🔊 Audio / Test recordings
-# -----------------------------
 *.wav
 *.mp3
-test-recording.wav
-
-# -----------------------------
-# 🔐 Environment & API keys
-# -----------------------------
+logs/
 .env
-.env.*
-*.key
-.envrc
-
-# -----------------------------
-# 🗂️ Temporary & cache files
-# -----------------------------
-temp/
-tmp/
-*.tmp
-__pycache__/
-*.py[cod]
-*$py.class
-
-# -----------------------------
-# 🧱 Virtual environments
-# -----------------------------
-.venv/
-venv/
-env/
-env.bak/
-
-# -----------------------------
-# 🧠 ChromaDB / Local embeddings
-# -----------------------------
 chroma_data/
-voice-assistant/chroma_data/
-
-# -----------------------------
-# 🗣️ Speech recognition models
-# (avoid committing large model directories)
-# -----------------------------
-voice-assistant/models/
-voice-assistant/models/vosk-*/
-
-# -----------------------------
-# 📚 Books / PDFs / Documents
-# -----------------------------
-/books/
-voice-assistant/books/
-*.pdf
-*.epub
-*.docx
-*.pptx
-*.zip
-*.txt
-# -----------------------------
-# 🧾 Generated documentation
-# -----------------------------
-voice-assistant/docs/
-docs/
-*.md.html
-
-# -----------------------------
-# ⚙️ OS / System files
-# -----------------------------
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# -----------------------------
-# 🧪 Test reports / Build outputs
-# -----------------------------
-*.class
-*.coverage
-*.exec
-*.out
-*.log
-*.tmp
-*.bak
-*.orig
-
-# -----------------------------
-# 🚫 Misc large / transient artifacts
-# -----------------------------
-*.tar
-*.tar.gz
-*.tgz
-*.zip
-*.7z
-*.iso
-*.dmg
+models/vosk-*/
+__pycache__/
