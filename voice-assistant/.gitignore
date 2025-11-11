@@ -63,4 +63,4 @@ __pycache__/
 venv/
 
 # Books (your PDFs - optional, uncomment if you want to exclude)
-# books/
+books/
