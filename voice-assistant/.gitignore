@@ -12,8 +12,6 @@ mvn.cmd
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
-pom.xml.next
-release.properties
 
 # IDE
 .idea/
@@ -51,10 +49,10 @@ temp/
 tmp/
 *.tmp
 
-# ChromaDB (for Week 2)
+# ChromaDB data
 chroma_data/
 
-# Vosk models (too large for git)
+# Vosk models (too large)
 models/vosk-*/
 
 # Python
@@ -63,3 +61,6 @@ __pycache__/
 *$py.class
 .Python
 venv/
+
+# Books (your PDFs - optional, uncomment if you want to exclude)
+# books/

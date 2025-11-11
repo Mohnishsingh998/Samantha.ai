@@ -1,108 +1,30 @@
-2025-11-09 21:01:44.235 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Initializing Voice Assistant...
-2025-11-09 21:01:44.393 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-09 21:01:44.397 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-09 21:01:44.398 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-09 21:01:44.398 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
-2025-11-09 21:01:44.509 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
-2025-11-09 21:01:44.510 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
-2025-11-09 21:01:44.510 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Smart LLM Router initialized
-2025-11-09 21:01:44.511 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Voice Assistant initialized successfully!
-2025-11-09 21:01:44.512 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
-2025-11-09 21:01:45.649 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
-2025-11-09 21:01:45.650 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
-2025-11-09 21:01:58.349 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (31 chars)
-2025-11-09 21:01:58.351 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your AI voice assistant. I can answer any question you have. Press enter to start.'
-2025-11-09 21:02:06.534 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:02:11.238 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Goodbye! It was great talking with you.'
-2025-11-09 21:02:14.123 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:02:14.124 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleaning up resources...
-2025-11-09 21:02:14.134 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
-2025-11-09 21:02:14.141 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - STT Engine closed
-2025-11-09 21:02:14.142 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleanup complete
-2025-11-09 21:27:21.771 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.utils.ConfigLoader - Configuration loaded from: config/assistant.properties
-2025-11-09 21:27:21.772 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Initializing Voice Assistant...
-2025-11-09 21:27:21.917 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
-2025-11-09 21:27:21.922 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
-2025-11-09 21:27:21.922 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
-2025-11-09 21:27:21.922 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
-2025-11-09 21:27:22.032 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
-2025-11-09 21:27:22.032 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
-2025-11-09 21:27:22.032 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Smart LLM Router initialized
-2025-11-09 21:27:22.032 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Voice Assistant initialized successfully!
-2025-11-09 21:27:22.033 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
-2025-11-09 21:27:23.053 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
-2025-11-09 21:27:23.054 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
-2025-11-09 21:27:28.733 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (2 chars)
-2025-11-09 21:27:28.734 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your AI voice assistant. I can answer any question you have. Press enter to start.'
-2025-11-09 21:27:36.522 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:27:37.773 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-09 21:27:39.384 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:27:39.551 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-09 21:27:44.602 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-09 21:27:44.610 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-10027229348974276497.wav
-2025-11-09 21:27:48.018 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is machine learning and give its one example'
-2025-11-09 21:27:48.019 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #1
-2025-11-09 21:27:48.619 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
-2025-11-09 21:27:48.619 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
-2025-11-09 21:27:49.132 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (409 chars)
-2025-11-09 21:27:49.133 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 514ms
-2025-11-09 21:27:49.134 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: '**Machine Learning (ML):** A subset of artificial intelligence that enables systems to automatically learn and improve from data without being explicitly programmed.
-
-**Example:** Image Recognition - Facebook's facial recognition feature uses ML to identify and tag friends in photos. It learns from a large dataset of images to recognize patterns and features, allowing it to accurately identify individuals.'
-2025-11-09 21:28:11.599 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:28:23.608 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-09 21:28:25.245 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:28:25.402 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-09 21:28:30.416 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-09 21:28:30.420 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-14873140982978254160.wav
-2025-11-09 21:28:31.947 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'tell me how many times India won world cup in cricket'
-2025-11-09 21:28:31.948 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #2
-2025-11-09 21:28:32.349 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)...
-2025-11-09 21:28:32.350 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
-2025-11-09 21:28:32.692 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (180 chars)
-2025-11-09 21:28:32.692 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Groq response received in 342ms
-2025-11-09 21:28:32.693 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'India has won the ICC Cricket World Cup twice:
-
-1. 1983: India won the World Cup under the captaincy of Kapil Dev.
-2. 2011: India won the World Cup under the captaincy of MS Dhoni.'
-2025-11-09 21:28:45.444 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:28:49.327 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Prefer local mode: true
-2025-11-09 21:28:49.328 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Switched to local mode'
-2025-11-09 21:28:51.481 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:28:52.857 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-09 21:28:54.503 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:28:54.657 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-09 21:28:59.685 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-09 21:28:59.688 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-16567297350987844346.wav
-2025-11-09 21:29:01.339 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'how many times does India won the World Cup'
-2025-11-09 21:29:01.339 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #3
-2025-11-09 21:29:01.339 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🏠 Using Ollama (local)...
-2025-11-09 21:29:01.339 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
-2025-11-09 21:29:03.574 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (203 chars)
-2025-11-09 21:29:03.574 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Ollama response received in 2235ms
-2025-11-09 21:29:03.575 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'India has not yet won the FIFA World Cup. However, the Indian national football team has qualified for the World Cup twice (1950 and 2010), but did not progress beyond the group stage on either occasion.'
-2025-11-09 21:29:16.171 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:29:17.421 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
-2025-11-09 21:29:19.103 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:29:19.256 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
-2025-11-09 21:29:24.304 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 160000 bytes
-2025-11-09 21:29:24.308 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-18021883101153671681.wav
-2025-11-09 21:29:26.323 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'tell me about how many times does India won cricket world cup'
-2025-11-09 21:29:26.323 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Processing request #4
-2025-11-09 21:29:26.324 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - 🏠 Using Ollama (local)...
-2025-11-09 21:29:26.324 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
-2025-11-09 21:29:28.480 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (225 chars)
-2025-11-09 21:29:28.482 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - ✅ Ollama response received in 2158ms
-2025-11-09 21:29:28.482 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'India has won the ICC Cricket World Cup twice:
-
-1. 1983: India won its first World Cup under Kapil Dev's captaincy.
-2. 2011: India defeated Sri Lanka in the final to win its second World Cup.
-
-Would you like more information?'
-2025-11-09 21:29:43.486 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:29:49.169 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Goodbye! It was great talking with you.'
-2025-11-09 21:29:52.154 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
-2025-11-09 21:29:52.155 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleaning up resources...
-2025-11-09 21:29:52.169 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
-2025-11-09 21:29:52.188 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - STT Engine closed
-2025-11-09 21:29:52.188 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleanup complete
+2025-11-11 11:07:26.288 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.utils.ConfigLoader - Configuration loaded from: config/assistant.properties
+2025-11-11 11:07:26.292 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Initializing Voice Assistant...
+2025-11-11 11:07:26.488 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-11 11:07:26.493 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-11 11:07:26.493 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-11 11:07:26.493 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
+2025-11-11 11:07:26.607 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
+2025-11-11 11:07:26.608 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
+2025-11-11 11:07:26.608 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.llm.SmartLLMRouter - Smart LLM Router initialized
+2025-11-11 11:07:26.608 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Voice Assistant initialized successfully!
+2025-11-11 11:07:26.609 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-11 11:07:27.129 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
+2025-11-11 11:07:27.129 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-11 11:07:35.387 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (31 chars)
+2025-11-11 11:07:35.388 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your AI voice assistant. I can answer any question you have. Press enter to start.'
+2025-11-11 11:07:44.155 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-11 11:08:07.791 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Goodbye! It was great talking with you.'
+2025-11-11 11:08:10.816 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-11 11:08:10.817 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleaning up resources...
+2025-11-11 11:08:10.830 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
+2025-11-11 11:08:10.862 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.v.audio.MacOSSTTEngine - STT Engine closed
+2025-11-11 11:08:10.862 [com.mohnish.voiceassistant.VoiceAssistant.main()] INFO  c.m.voiceassistant.VoiceAssistant - Cleanup complete
+2025-11-11 11:11:39.003 [main] INFO  c.m.v.document.DocumentParser - 📄 Metadata extracted for Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf -> 1101 pages, size: 287773847 bytes
+2025-11-11 11:11:39.005 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf
+2025-11-11 11:11:39.005 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf
+2025-11-11 11:11:40.948 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 1101 pages (~342734 words) from Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf
+2025-11-11 11:11:40.983 [main] INFO  c.m.v.document.DocumentParser - 📄 Metadata extracted for test-knowledge.txt -> 1 pages, size: 521 bytes
+2025-11-11 11:11:40.984 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: test-knowledge.txt
+2025-11-11 11:11:40.984 [main] INFO  c.m.v.document.DocumentParser - Reading text file: test-knowledge.txt
+2025-11-11 11:11:40.987 [main] INFO  c.m.v.document.DocumentParser - ✅ Read 71 words from test-knowledge.txt
