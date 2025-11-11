@@ -102,13 +102,14 @@ voice-assistant/models/vosk-*/
 # -----------------------------
 # 📚 Books / PDFs / Documents
 # -----------------------------
+/books/
 voice-assistant/books/
 *.pdf
 *.epub
 *.docx
 *.pptx
 *.zip
-
+*.txt
 # -----------------------------
 # 🧾 Generated documentation
 # -----------------------------
