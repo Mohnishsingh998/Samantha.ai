@@ -33,6 +33,12 @@
             <artifactId>tika-core</artifactId>
             <version>2.9.1</version>
         </dependency>
+        <!-- json formate -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
 
         <!-- OkHttp for ChromaDB HTTP client -->
         <dependency>

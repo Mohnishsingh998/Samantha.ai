@@ -363,4 +363,7 @@ public class TextChunker {
 
     public ChunkingStrategy getStrategy() { return strategy; }
     public void setStrategy(ChunkingStrategy strategy) { this.strategy = strategy; }
+    public List<DocumentChunk> chunkText(String text, String sourceFile) {
+    return chunkDocument(text, sourceFile, sourceFile);
+}
 }

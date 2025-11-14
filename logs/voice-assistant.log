@@ -1,0 +1,8 @@
+2025-11-14 09:58:50.022 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-14 09:58:50.023 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 3 chunks
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 3 texts
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/3
+2025-11-14 09:58:51.402 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 2/3
+2025-11-14 09:58:51.537 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 3/3
+2025-11-14 09:58:51.586 [main] INFO  c.m.v.embedding.OllamaEmbeddings - ✅ Generated 3 embeddings successfully
