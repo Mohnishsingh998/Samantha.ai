@@ -1,0 +1,25 @@
+2025-11-14 09:58:50.022 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-14 09:58:50.023 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 3 chunks
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 3 texts
+2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/3
+2025-11-14 09:58:51.402 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 2/3
+2025-11-14 09:58:51.537 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 3/3
+2025-11-14 09:58:51.586 [main] INFO  c.m.v.embedding.OllamaEmbeddings - ✅ Generated 3 embeddings successfully
+2025-11-14 10:29:02.076 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-14 10:29:02.131 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-14 10:38:25.859 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-14 10:38:25.897 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected
+2025-11-14 10:38:25.898 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-14 10:38:33.354 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-14 10:38:33.382 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected
+2025-11-14 10:38:33.382 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-14 10:38:40.608 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-14 10:38:40.636 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected
+2025-11-14 10:38:40.636 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-14 10:42:18.616 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized at http://localhost:8000
+2025-11-14 10:42:18.646 [main] INFO  c.m.v.vectordb.ChromaDBClient - Chroma heartbeat: OK
+2025-11-14 10:42:18.647 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-14 11:09:01.419 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized at http://localhost:8000
+2025-11-14 11:09:01.450 [main] INFO  c.m.v.vectordb.ChromaDBClient - Chroma heartbeat: OK
+2025-11-14 11:09:01.451 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection

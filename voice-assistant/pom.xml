@@ -20,6 +20,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.12.0</version>
+        </dependency>
          <!-- Apache PDFBox for PDF parsing -->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>

@@ -1,8 +1,100 @@
-2025-11-14 09:58:50.022 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
-2025-11-14 09:58:50.023 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
-2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 3 chunks
-2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 3 texts
-2025-11-14 09:58:51.267 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/3
-2025-11-14 09:58:51.402 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 2/3
-2025-11-14 09:58:51.537 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 3/3
-2025-11-14 09:58:51.586 [main] INFO  c.m.v.embedding.OllamaEmbeddings - ✅ Generated 3 embeddings successfully
+2025-11-15 12:19:36.603 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized at http://localhost:8000
+2025-11-15 12:19:36.641 [main] INFO  c.m.v.vectordb.ChromaDBClient - Chroma heartbeat: OK
+2025-11-15 12:19:36.641 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:22:10.966 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:11.001 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:22:19.328 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:19.357 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:22:28.860 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:28.889 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:28:55.159 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:28:55.191 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:28:55.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating/getting collection: test_collection
+2025-11-15 12:28:55.195 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 404 - 
+2025-11-15 12:31:27.356 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:31:27.385 [main] ERROR c.m.v.vectordb.ChromaDBClient - Connection test failed
+java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8000
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBClient.testConnection(ChromaDBClient.java:39)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBTest.main(ChromaDBTest.java:14)
+	Suppressed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:8000
+		... 18 common frames omitted
+	Caused by: java.net.ConnectException: Connection refused
+		at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+		at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+		at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+		at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+		at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+		at java.base/java.net.Socket.connect(Unknown Source)
+		at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+		at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+		... 17 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+	... 17 common frames omitted
+2025-11-15 12:33:16.705 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:33:16.738 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:33:16.738 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating/getting collection: test_collection
+2025-11-15 12:33:16.741 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 404 - 
+2025-11-15 12:37:27.640 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:37:27.679 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:37:27.679 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:37:27.683 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:51:45.592 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:51:45.648 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:51:45.649 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:51:45.654 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:55:56.860 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:55:56.890 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:55:56.890 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:55:56.894 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:56:58.309 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:56:58.345 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:56:58.345 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:56:58.349 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:59:38.363 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:59:38.391 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:59:38.391 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection created: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - Adding 3 documents to collection: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:59:38.417 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: test_collection
+2025-11-15 12:59:38.439 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Added 3 documents
+2025-11-15 12:59:38.440 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: test_collection (top 2)
+2025-11-15 12:59:38.449 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 2 results
+2025-11-15 12:59:38.450 [main] INFO  c.m.v.vectordb.ChromaDBClient - Deleting collection: test_collection
+2025-11-15 12:59:38.452 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection deleted: test_collection
+2025-11-15 13:04:43.140 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 13:04:43.169 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 13:04:43.170 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 13:04:43.191 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection created: test_collection
+2025-11-15 13:04:43.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Adding 3 documents to collection: test_collection
+2025-11-15 13:04:43.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 13:04:43.195 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: test_collection
+2025-11-15 13:04:43.225 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Added 3 documents
+2025-11-15 13:04:43.225 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: test_collection (top 2)
+2025-11-15 13:04:43.233 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 2 results
+2025-11-15 13:04:43.234 [main] INFO  c.m.v.vectordb.ChromaDBClient - Deleting collection: test_collection
+2025-11-15 13:04:43.235 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection deleted: test_collection
