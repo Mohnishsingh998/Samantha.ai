@@ -19,7 +19,7 @@ public class OllamaEmbeddings {
     private final String baseUrl;
     private final HttpClient httpClient;
     private final Gson gson;
-    private final String model = "nomic-embed-text";
+    private final String model = "mxbai-embed-large";
     
     public OllamaEmbeddings(String baseUrl) {
         this.baseUrl = baseUrl;
@@ -37,26 +37,46 @@ public class OllamaEmbeddings {
         if (text == null || text.trim().isEmpty()) {
             throw new IllegalArgumentException("Text cannot be empty");
         }
-        
+
+        // 🔍 DEBUG LOGS
+        logger.info("🔍 DEBUG: Generating embedding for text length: {}", text.length());
+        logger.debug("🔍 DEBUG: First 100 chars: {}", 
+            text.substring(0, Math.min(100, text.length()))
+        );
+
         logger.debug("Generating embedding for text ({} chars)", text.length());
         
         // Build request body
         JsonObject requestBody = new JsonObject();
         requestBody.addProperty("model", model);
         requestBody.addProperty("prompt", text);
+
+        // 🔍 DEBUG LOG
+        String requestJson = gson.toJson(requestBody);
+        logger.info("🔍 DEBUG: Request body: {}", 
+            requestJson.substring(0, Math.min(200, requestJson.length()))
+        );
         
         // Create HTTP request
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(baseUrl + "/api/embeddings"))
             .header("Content-Type", "application/json")
             .timeout(Duration.ofSeconds(30))
-            .POST(HttpRequest.BodyPublishers.ofString(gson.toJson(requestBody)))
+            .POST(HttpRequest.BodyPublishers.ofString(requestJson))
             .build();
         
         // Send request
         HttpResponse<String> response = httpClient.send(
             request,
             HttpResponse.BodyHandlers.ofString()
+        );
+
+        // 🔍 DEBUG RESPONSE LOGS
+        logger.info("🔍 DEBUG: Response status: {}", response.statusCode());
+
+        String responseBody = response.body();
+        logger.info("🔍 DEBUG: Response body: {}", 
+            responseBody.substring(0, Math.min(500, responseBody.length()))
         );
         
         // Check response
@@ -65,7 +85,7 @@ public class OllamaEmbeddings {
         }
         
         // Parse response
-        JsonObject jsonResponse = gson.fromJson(response.body(), JsonObject.class);
+        JsonObject jsonResponse = gson.fromJson(responseBody, JsonObject.class);
         
         // Extract embedding array
         List<Double> embedding = new ArrayList<>();
@@ -101,7 +121,6 @@ public class OllamaEmbeddings {
                 
             } catch (Exception e) {
                 logger.error("Failed to generate embedding for text {}: {}", count, e.getMessage());
-                // Add empty embedding or rethrow based on your needs
                 throw e;
             }
         }
@@ -114,7 +133,6 @@ public class OllamaEmbeddings {
      * Get embedding dimension size
      */
     public int getDimensionSize() throws Exception {
-        // Generate a test embedding to determine dimension
         List<Double> testEmbedding = generateEmbedding("test");
         return testEmbedding.size();
     }

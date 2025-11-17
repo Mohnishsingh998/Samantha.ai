@@ -60,49 +60,52 @@ public class ChromaDBClient {
      * Create collection using v2 API
      */
     public void createCollection(String collectionName) throws IOException {
-        logger.info("Creating collection: {}", collectionName);
-        
-        // First, try to get existing collection
-        try {
-            getCollectionInfo(collectionName);
-            logger.info("✅ Collection already exists: {}", collectionName);
-            return;
-        } catch (IOException e) {
-            // Collection doesn't exist, create it
-        }
-        
-        // Create new collection using v2 API
-        JsonObject requestBody = new JsonObject();
-        requestBody.addProperty("name", collectionName);
-        
-        JsonObject metadata = new JsonObject();
-        metadata.addProperty("description", "Knowledge base collection");
-        requestBody.add("metadata", metadata);
-        
-        // v2 API endpoint
-        String url = String.format("%s/api/v2/tenants/%s/databases/%s/collections", 
+    logger.info("Creating collection: {}", collectionName);
+    
+    // First, try to get existing collection
+    try {
+        getCollectionInfo(collectionName);
+        logger.info("✅ Collection already exists: {}", collectionName);
+        return;
+    } catch (IOException e) {
+        // Collection doesn't exist, create it
+    }
+    
+    // Create new collection using v2 API WITH COSINE DISTANCE
+    JsonObject requestBody = new JsonObject();
+    requestBody.addProperty("name", collectionName);
+    
+    JsonObject metadata = new JsonObject();
+    metadata.addProperty("description", "Knowledge base collection");
+    
+    // ✅ IMPORTANT: Tell ChromaDB to use COSINE distance
+    metadata.addProperty("hnsw:space", "cosine");  // ← KEY FIX
+    
+    requestBody.add("metadata", metadata);
+    
+    String url = String.format("%s/api/v2/tenants/%s/databases/%s/collections",
             baseUrl, DEFAULT_TENANT, DEFAULT_DATABASE);
-        
-        RequestBody body = RequestBody.create(gson.toJson(requestBody), JSON);
-        Request request = new Request.Builder()
+    
+    RequestBody body = RequestBody.create(gson.toJson(requestBody), JSON);
+    Request request = new Request.Builder()
             .url(url)
             .post(body)
             .build();
+    
+    try (Response response = httpClient.newCall(request).execute()) {
+        String responseBody = response.body() != null ? response.body().string() : "";
         
-        try (Response response = httpClient.newCall(request).execute()) {
-            String responseBody = response.body() != null ? response.body().string() : "";
-            
-            if (response.isSuccessful()) {
-                logger.info("✅ Collection created: {}", collectionName);
-            } else if (response.code() == 409) {
-                logger.info("✅ Collection already exists: {}", collectionName);
-            } else {
-                logger.error("Failed to create collection: {} - {}", response.code(), responseBody);
-                throw new IOException("Failed to create collection: " + response.code() + " - " + responseBody);
-            }
+        if (response.isSuccessful()) {
+            logger.info("✅ Collection created: {}", collectionName);
+        } else if (response.code() == 409) {
+            logger.info("✅ Collection already exists: {}", collectionName);
+        } else {
+            logger.error("Failed to create collection: {} - {}", response.code(), responseBody);
+            throw new IOException("Failed to create collection: " + response.code() + " - " + responseBody);
         }
     }
-    
+}
+
     /**
      * Get collection information using v2 API
      */

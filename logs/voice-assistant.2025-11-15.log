@@ -1,0 +1,377 @@
+2025-11-15 12:19:36.603 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized at http://localhost:8000
+2025-11-15 12:19:36.641 [main] INFO  c.m.v.vectordb.ChromaDBClient - Chroma heartbeat: OK
+2025-11-15 12:19:36.641 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:22:10.966 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:11.001 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:22:19.328 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:19.357 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:22:28.860 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized: http://localhost:8000
+2025-11-15 12:22:28.889 [main] WARN  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ❌ Failed
+2025-11-15 12:28:55.159 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:28:55.191 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:28:55.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating/getting collection: test_collection
+2025-11-15 12:28:55.195 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 404 - 
+2025-11-15 12:31:27.356 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:31:27.385 [main] ERROR c.m.v.vectordb.ChromaDBClient - Connection test failed
+java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8000
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBClient.testConnection(ChromaDBClient.java:39)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBTest.main(ChromaDBTest.java:14)
+	Suppressed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:8000
+		... 18 common frames omitted
+	Caused by: java.net.ConnectException: Connection refused
+		at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+		at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+		at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+		at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+		at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+		at java.base/java.net.Socket.connect(Unknown Source)
+		at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+		at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+		... 17 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+	... 17 common frames omitted
+2025-11-15 12:33:16.705 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:33:16.738 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:33:16.738 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating/getting collection: test_collection
+2025-11-15 12:33:16.741 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 404 - 
+2025-11-15 12:37:27.640 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:37:27.679 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:37:27.679 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:37:27.683 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:51:45.592 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:51:45.648 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:51:45.649 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:51:45.654 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:55:56.860 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:55:56.890 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:55:56.890 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:55:56.894 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:56:58.309 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:56:58.345 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:56:58.345 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:56:58.349 [main] ERROR c.m.v.vectordb.ChromaDBClient - Failed to create collection: 405 - 
+2025-11-15 12:59:38.363 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 12:59:38.391 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 12:59:38.391 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection created: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - Adding 3 documents to collection: test_collection
+2025-11-15 12:59:38.414 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 12:59:38.417 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: test_collection
+2025-11-15 12:59:38.439 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Added 3 documents
+2025-11-15 12:59:38.440 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: test_collection (top 2)
+2025-11-15 12:59:38.449 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 2 results
+2025-11-15 12:59:38.450 [main] INFO  c.m.v.vectordb.ChromaDBClient - Deleting collection: test_collection
+2025-11-15 12:59:38.452 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection deleted: test_collection
+2025-11-15 13:04:43.140 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 13:04:43.169 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-15 13:04:43.170 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 13:04:43.191 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection created: test_collection
+2025-11-15 13:04:43.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Adding 3 documents to collection: test_collection
+2025-11-15 13:04:43.192 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: test_collection
+2025-11-15 13:04:43.195 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: test_collection
+2025-11-15 13:04:43.225 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Added 3 documents
+2025-11-15 13:04:43.225 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: test_collection (top 2)
+2025-11-15 13:04:43.233 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 2 results
+2025-11-15 13:04:43.234 [main] INFO  c.m.v.vectordb.ChromaDBClient - Deleting collection: test_collection
+2025-11-15 13:04:43.235 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection deleted: test_collection
+2025-11-15 20:36:06.020 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:36:06.021 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:36:06.062 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:36:06.062 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:36:06.062 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:36:06.062 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:36:06.062 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:36:06.142 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection created: my_books
+2025-11-15 20:36:06.142 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:36:21.490 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Found 2 PDF files to index
+2025-11-15 20:36:21.491 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index 2 books
+2025-11-15 20:36:21.491 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - 
+=== Indexing book 1/2: test.pdf ===
+2025-11-15 20:36:21.491 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: test.pdf
+2025-11-15 20:36:21.491 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:36:21.491 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: test.pdf
+2025-11-15 20:36:21.492 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: test.pdf
+2025-11-15 20:36:22.586 [main] ERROR c.m.v.document.DocumentParser - ❌ Failed to extract text from PDF: test.pdf
+java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:217)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1110)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1093)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1052)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1000)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractTextFromPDF(DocumentParser.java:33)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractText(DocumentParser.java:91)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:58)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:36:22.587 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: test.pdf
+java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:217)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1110)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1093)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1052)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1000)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractTextFromPDF(DocumentParser.java:33)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractText(DocumentParser.java:91)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:58)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:36:22.587 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: test.pdf
+java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:217)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1110)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1093)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1052)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1000)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractTextFromPDF(DocumentParser.java:33)
+	at com.mohnish.voiceassistant.document.DocumentParser.extractText(DocumentParser.java:91)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:58)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:36:22.588 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - 
+=== Indexing book 2/2: mybook.pdf ===
+2025-11-15 20:36:22.588 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: mybook.pdf
+2025-11-15 20:36:22.588 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:36:22.588 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: mybook.pdf
+2025-11-15 20:36:22.588 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: mybook.pdf
+2025-11-15 20:36:23.884 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 392 pages (~102629 words) from mybook.pdf
+2025-11-15 20:36:23.886 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 669196 characters
+2025-11-15 20:36:23.886 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:36:23.886 [main] INFO  c.m.v.document.TextChunker - Chunking document: mybook.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.document.TextChunker - Created 239 chunks from mybook.pdf
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 239 chunks
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 239 chunks
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 239 texts
+2025-11-15 20:36:23.928 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/239
+2025-11-15 20:36:25.281 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 1: Embedding API error: 500
+2025-11-15 20:36:25.281 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:36:25.281 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:36:25.282 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - 
+✅ Indexing complete!
+2025-11-15 20:36:25.282 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Successfully indexed: 0/2
+2025-11-15 20:40:21.308 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:40:21.309 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:40:21.347 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:40:21.347 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:40:21.347 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:40:21.347 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:40:21.347 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:40:21.408 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: my_books
+2025-11-15 20:40:21.408 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:40:26.275 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Found 1 PDF files to index
+2025-11-15 20:40:26.275 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index 1 books
+2025-11-15 20:40:26.275 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - 
+=== Indexing book 1/1: mybook.pdf ===
+2025-11-15 20:40:26.275 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: mybook.pdf
+2025-11-15 20:40:26.276 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:40:26.276 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: mybook.pdf
+2025-11-15 20:40:26.276 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: mybook.pdf
+2025-11-15 20:40:27.520 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 392 pages (~102629 words) from mybook.pdf
+2025-11-15 20:40:27.522 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 669196 characters
+2025-11-15 20:40:27.522 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:40:27.522 [main] INFO  c.m.v.document.TextChunker - Chunking document: mybook.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:40:27.565 [main] INFO  c.m.v.document.TextChunker - Created 239 chunks from mybook.pdf
+2025-11-15 20:40:27.566 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 239 chunks
+2025-11-15 20:40:27.566 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:40:27.566 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 239 chunks
+2025-11-15 20:40:27.566 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 239 texts
+2025-11-15 20:40:27.566 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/239
+2025-11-15 20:40:27.902 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 1: Embedding API error: 500
+2025-11-15 20:40:27.902 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:40:27.903 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBooks(KnowledgeBaseIndexer.java:140)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexDirectory(KnowledgeBaseIndexer.java:186)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:122)
+2025-11-15 20:40:27.903 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - 
+✅ Indexing complete!
+2025-11-15 20:40:27.904 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Successfully indexed: 0/1
+2025-11-15 20:41:59.922 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:41:59.923 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:41:59.962 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:41:59.963 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:41:59.963 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:41:59.963 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:41:59.963 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:41:59.992 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: my_books
+2025-11-15 20:41:59.992 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:42:04.263 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: mybook.pdf
+2025-11-15 20:42:04.266 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:42:04.266 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: mybook.pdf
+2025-11-15 20:42:04.266 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: mybook.pdf
+2025-11-15 20:42:05.574 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 392 pages (~102629 words) from mybook.pdf
+2025-11-15 20:42:05.576 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 669196 characters
+2025-11-15 20:42:05.576 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:42:05.576 [main] INFO  c.m.v.document.TextChunker - Chunking document: mybook.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.document.TextChunker - Created 239 chunks from mybook.pdf
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 239 chunks
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 239 chunks
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 239 texts
+2025-11-15 20:42:05.617 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/239
+2025-11-15 20:42:06.588 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 1: Embedding API error: 500
+2025-11-15 20:42:06.589 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:187)
+2025-11-15 20:45:11.640 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:45:11.641 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:45:11.682 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:45:11.682 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:45:11.682 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:45:11.682 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:45:11.682 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:45:11.751 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: my_books
+2025-11-15 20:45:11.752 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:45:25.584 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: mybook.pdf
+2025-11-15 20:45:25.586 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:45:25.587 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: mybook.pdf
+2025-11-15 20:45:25.587 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: mybook.pdf
+2025-11-15 20:45:26.939 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 392 pages (~102629 words) from mybook.pdf
+2025-11-15 20:45:26.940 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 669196 characters
+2025-11-15 20:45:26.940 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:45:26.940 [main] INFO  c.m.v.document.TextChunker - Chunking document: mybook.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:45:26.983 [main] INFO  c.m.v.document.TextChunker - Created 239 chunks from mybook.pdf
+2025-11-15 20:45:26.984 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 239 chunks
+2025-11-15 20:45:26.984 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:45:26.984 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 239 chunks
+2025-11-15 20:45:26.984 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 239 texts
+2025-11-15 20:45:26.984 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/239
+2025-11-15 20:45:28.132 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 2/239
+2025-11-15 20:45:28.190 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 2: Embedding API error: 500
+2025-11-15 20:45:28.190 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: mybook.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:187)
+2025-11-15 20:45:32.587 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:45:32.587 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:45:32.625 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:45:32.626 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:45:32.626 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:45:32.626 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:45:32.626 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:45:32.654 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: my_books
+2025-11-15 20:45:32.654 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:45:36.095 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: Internship report final.pdf
+2025-11-15 20:45:36.096 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:45:36.097 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: Internship report final.pdf
+2025-11-15 20:45:36.097 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: Internship report final.pdf
+2025-11-15 20:45:42.084 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 25 pages (~4949 words) from Internship report final.pdf
+2025-11-15 20:45:42.085 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 35997 characters
+2025-11-15 20:45:42.085 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:45:42.085 [main] INFO  c.m.v.document.TextChunker - Chunking document: Internship report final.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.document.TextChunker - Created 10 chunks from Internship report final.pdf
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 10 chunks
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 10 chunks
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 10 texts
+2025-11-15 20:45:42.093 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/10
+2025-11-15 20:45:43.510 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 1: Embedding API error: 500
+2025-11-15 20:45:43.510 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: Internship report final.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:187)
+2025-11-15 20:47:03.561 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: nomic-embed-text
+2025-11-15 20:47:03.562 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-15 20:47:03.602 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-15 20:47:03.602 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Knowledge Base Indexer initialized
+2025-11-15 20:47:03.602 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Collection: my_books
+2025-11-15 20:47:03.602 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Initializing collection: my_books
+2025-11-15 20:47:03.602 [main] INFO  c.m.v.vectordb.ChromaDBClient - Creating collection: my_books
+2025-11-15 20:47:03.671 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Collection already exists: my_books
+2025-11-15 20:47:03.671 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Collection ready
+2025-11-15 20:47:09.981 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Starting to index book: Internship report final.pdf
+2025-11-15 20:47:09.984 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 1/4: Extracting text...
+2025-11-15 20:47:09.984 [main] INFO  c.m.v.document.DocumentParser - Detecting file type for: Internship report final.pdf
+2025-11-15 20:47:09.985 [main] INFO  c.m.v.document.DocumentParser - Extracting text from PDF: Internship report final.pdf
+2025-11-15 20:47:10.394 [main] INFO  c.m.v.document.DocumentParser - ✅ Extracted 25 pages (~4949 words) from Internship report final.pdf
+2025-11-15 20:47:10.395 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Extracted 35997 characters
+2025-11-15 20:47:10.395 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 2/4: Chunking text...
+2025-11-15 20:47:10.395 [main] INFO  c.m.v.document.TextChunker - Chunking document: Internship report final.pdf (strategy: SENTENCE_BOUNDARY)
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.document.TextChunker - Created 10 chunks from Internship report final.pdf
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - ✅ Created 10 chunks
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.indexing.KnowledgeBaseIndexer - Step 3/4: Generating embeddings...
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Generating embeddings for 10 chunks
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Generating embeddings for 10 texts
+2025-11-15 20:47:10.402 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Processing text 1/10
+2025-11-15 20:47:18.664 [main] ERROR c.m.v.embedding.OllamaEmbeddings - Failed to generate embedding for text 1: Embedding API error: 500
+2025-11-15 20:47:18.664 [main] ERROR c.m.v.indexing.KnowledgeBaseIndexer - Failed to index book: Internship report final.pdf
+java.lang.Exception: Embedding API error: 500
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbedding(OllamaEmbeddings.java:64)
+	at com.mohnish.voiceassistant.embedding.OllamaEmbeddings.generateEmbeddings(OllamaEmbeddings.java:94)
+	at com.mohnish.voiceassistant.embedding.EmbeddingGenerator.generateForChunks(EmbeddingGenerator.java:39)
+	at com.mohnish.voiceassistant.indexing.KnowledgeBaseIndexer.indexBook(KnowledgeBaseIndexer.java:70)
+	at com.mohnish.voiceassistant.indexing.IndexingTest.main(IndexingTest.java:187)

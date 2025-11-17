@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 public class TextChunker {
     private static final Logger logger = LoggerFactory.getLogger(TextChunker.class);
 
-    private int chunkSize = 500;           // Target chunk size in words
-    private int chunkOverlap = 50;         // Overlap between chunks
+    private int chunkSize = 1000;           // Target chunk size in words
+    private int chunkOverlap = 100;         // Overlap between chunks
     private ChunkingStrategy strategy;
 
     public enum ChunkingStrategy {
