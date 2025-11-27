@@ -684,3 +684,108 @@
 2025-11-17 11:17:21.969 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: my_books (top 5)
 2025-11-17 11:17:21.981 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 5 results
 2025-11-17 11:17:21.982 [main] INFO  c.m.v.vectordb.VectorStore - ✅ Found 5 results
+2025-11-17 12:21:26.094 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-17 12:21:26.131 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: mxbai-embed-large
+2025-11-17 12:21:26.131 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-17 12:21:26.131 [main] INFO  c.m.v.vectordb.VectorStore - VectorStore initialized for collection: my_books
+2025-11-17 12:21:26.132 [main] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
+2025-11-17 12:21:26.133 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
+2025-11-17 12:21:26.133 [main] INFO  c.m.v.llm.SmartLLMRouter - SmartLLMRouter initialized
+2025-11-17 12:21:26.133 [main] INFO  c.m.v.llm.SmartLLMRouter - Groq: Available
+2025-11-17 12:21:26.133 [main] INFO  c.m.v.llm.SmartLLMRouter - Ollama: Available
+2025-11-17 12:21:26.133 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - RAG Pipeline initialized
+2025-11-17 12:21:26.133 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Top-K: 3
+2025-11-17 12:21:26.133 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Relevance threshold: 0.5
+2025-11-17 12:21:26.133 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Max history: 5
+2025-11-17 12:21:26.177 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB connection test: ✅ Connected (v2 API)
+2025-11-17 12:21:26.178 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-17 12:21:27.099 [main] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
+2025-11-17 12:21:27.099 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-17 12:21:29.464 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (42 chars)
+2025-11-17 12:21:29.465 [main] INFO  c.m.v.llm.SmartLLMRouter - Groq: OK | Ollama: OK
+2025-11-17 12:21:29.465 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Connection test: ChromaDB=true, LLM=true
+2025-11-17 12:21:29.467 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Processing question: 'What is NumPy?'
+2025-11-17 12:21:29.467 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🔍 Searching knowledge base (top 3)
+2025-11-17 12:21:29.468 [main] INFO  c.m.v.vectordb.VectorStore - Searching for: 'What is NumPy?' (top 3)
+2025-11-17 12:21:29.468 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Generating embedding for text length: 14
+2025-11-17 12:21:29.468 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Request body: {"model":"mxbai-embed-large","prompt":"What is NumPy?"}
+2025-11-17 12:21:37.324 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response status: 200
+2025-11-17 12:21:37.324 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response body: {"embedding":[0.4985218048095703,0.19576868414878845,-1.235040545463562,-0.43292027711868286,-0.08913090825080872,-0.6203730702400208,0.22440972924232483,-0.2837805449962616,0.48207420110702515,1.1290124654769897,0.4928227961063385,-0.1272846758365631,-0.2777877151966095,0.05200480669736862,-0.19245420396327972,0.015309141017496586,-0.5705664753913879,-1.2059823274612427,-0.6309457421302795,-0.3413756787776947,-0.6612258553504944,0.3323690593242645,-0.5144502520561218,-0.516555666923523,-0.63715
+2025-11-17 12:21:37.336 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: my_books (top 3)
+2025-11-17 12:21:37.443 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 3 results
+2025-11-17 12:21:37.443 [main] INFO  c.m.v.vectordb.VectorStore - ✅ Found 3 results
+2025-11-17 12:21:37.444 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Found 3 relevant passages
+2025-11-17 12:21:37.444 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [1] Relevance: {:.1f}% - Source: 77.21286869820415 (chunk mybook.pdf)
+2025-11-17 12:21:37.444 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [2] Relevance: {:.1f}% - Source: 71.28034903420829 (chunk mybook.pdf)
+2025-11-17 12:21:37.444 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [3] Relevance: {:.1f}% - Source: 71.22550141898293 (chunk mybook.pdf)
+2025-11-17 12:21:37.444 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🤖 Generating answer with LLM...
+2025-11-17 12:21:37.444 [main] INFO  c.m.v.llm.SmartLLMRouter - 🧠 generate() called | prompt length = 19779 chars
+2025-11-17 12:21:37.854 [main] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)
+2025-11-17 12:21:37.855 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-17 12:21:38.506 [main] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (422 chars)
+2025-11-17 12:21:38.507 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Answer generated in 1063ms
+2025-11-17 12:21:39.513 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Processing question: 'Explain machine learning'
+2025-11-17 12:21:39.514 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🔍 Searching knowledge base (top 3)
+2025-11-17 12:21:39.514 [main] INFO  c.m.v.vectordb.VectorStore - Searching for: 'Explain machine learning' (top 3)
+2025-11-17 12:21:39.514 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Generating embedding for text length: 24
+2025-11-17 12:21:39.514 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Request body: {"model":"mxbai-embed-large","prompt":"Explain machine learning"}
+2025-11-17 12:21:39.632 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response status: 200
+2025-11-17 12:21:39.632 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response body: {"embedding":[0.6875497698783875,0.5132105350494385,-0.5032456517219543,-0.9675777554512024,0.7398960590362549,-0.08334501087665558,-0.2065165936946869,-0.10416294634342194,-0.2037181407213211,1.5257105827331543,0.27949997782707214,0.3486383557319641,-0.013210393488407135,-0.30762434005737305,-0.4402215778827667,0.23659001290798187,0.1632045954465866,-0.8925542831420898,-0.6427901983261108,-0.4242057800292969,-0.22040043771266937,0.4939195513725281,-0.873929500579834,-0.8486806750297546,-0.74725
+2025-11-17 12:21:39.638 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: my_books (top 3)
+2025-11-17 12:21:39.651 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 3 results
+2025-11-17 12:21:39.652 [main] INFO  c.m.v.vectordb.VectorStore - ✅ Found 3 results
+2025-11-17 12:21:39.652 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Found 3 relevant passages
+2025-11-17 12:21:39.652 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [1] Relevance: {:.1f}% - Source: 80.84555133286665 (chunk mybook.pdf)
+2025-11-17 12:21:39.652 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [2] Relevance: {:.1f}% - Source: 80.01380782278837 (chunk mybook.pdf)
+2025-11-17 12:21:39.652 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [3] Relevance: {:.1f}% - Source: 79.59846522378477 (chunk mybook.pdf)
+2025-11-17 12:21:39.652 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🤖 Generating answer with LLM...
+2025-11-17 12:21:39.652 [main] INFO  c.m.v.llm.SmartLLMRouter - 🧠 generate() called | prompt length = 19434 chars
+2025-11-17 12:21:40.048 [main] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)
+2025-11-17 12:21:40.049 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-17 12:21:40.765 [main] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (252 chars)
+2025-11-17 12:21:40.766 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Answer generated in 1114ms
+2025-11-17 12:21:41.768 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Processing question: 'What is scikit-learn?'
+2025-11-17 12:21:41.769 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🔍 Searching knowledge base (top 3)
+2025-11-17 12:21:41.770 [main] INFO  c.m.v.vectordb.VectorStore - Searching for: 'What is scikit-learn?' (top 3)
+2025-11-17 12:21:41.770 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Generating embedding for text length: 21
+2025-11-17 12:21:41.770 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Request body: {"model":"mxbai-embed-large","prompt":"What is scikit-learn?"}
+2025-11-17 12:21:41.927 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response status: 200
+2025-11-17 12:21:41.928 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response body: {"embedding":[-0.07846341282129288,1.10781729221344,-0.6970686912536621,-0.6997791528701782,0.33035343885421753,-0.08015049248933792,-0.10580652207136154,-0.22267505526542664,0.06465978175401688,0.7167795896530151,0.12236093729734421,-0.5596247911453247,-0.37794578075408936,0.20514221489429474,-0.32806113362312317,-0.21601273119449615,-1.0784748792648315,-0.6215106844902039,-1.3494025468826294,-0.25119563937187195,0.2966134250164032,0.6645500063896179,-0.627144992351532,-0.777148962020874,-0.828
+2025-11-17 12:21:41.934 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: my_books (top 3)
+2025-11-17 12:21:41.946 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 3 results
+2025-11-17 12:21:41.946 [main] INFO  c.m.v.vectordb.VectorStore - ✅ Found 3 results
+2025-11-17 12:21:41.946 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Found 3 relevant passages
+2025-11-17 12:21:41.946 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [1] Relevance: {:.1f}% - Source: 79.92756644218744 (chunk mybook.pdf)
+2025-11-17 12:21:41.946 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [2] Relevance: {:.1f}% - Source: 79.2305007003184 (chunk mybook.pdf)
+2025-11-17 12:21:41.947 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [3] Relevance: {:.1f}% - Source: 78.33725601920366 (chunk mybook.pdf)
+2025-11-17 12:21:41.947 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🤖 Generating answer with LLM...
+2025-11-17 12:21:41.947 [main] INFO  c.m.v.llm.SmartLLMRouter - 🧠 generate() called | prompt length = 20896 chars
+2025-11-17 12:21:43.014 [main] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)
+2025-11-17 12:21:43.015 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-17 12:21:43.104 [main] ERROR c.m.voiceassistant.llm.GroqClient - Groq API error: 429 - {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k90ev9hyfa28qgr6ykw0crf3` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 7909, Requested 4731. Please try again in 3.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-17 12:21:43.105 [main] WARN  c.m.v.llm.SmartLLMRouter - ⚠ Groq failed: Groq API error: 429
+2025-11-17 12:21:43.105 [main] INFO  c.m.v.llm.SmartLLMRouter - 🏠 Using Ollama (local)
+2025-11-17 12:21:43.105 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-17 12:21:58.447 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (301 chars)
+2025-11-17 12:21:58.450 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Answer generated in 16503ms
+2025-11-17 12:22:15.818 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Processing question: 'what is tesnsor flow'
+2025-11-17 12:22:15.818 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🔍 Searching knowledge base (top 3)
+2025-11-17 12:22:15.818 [main] INFO  c.m.v.vectordb.VectorStore - Searching for: 'what is tesnsor flow' (top 3)
+2025-11-17 12:22:15.819 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Generating embedding for text length: 20
+2025-11-17 12:22:15.819 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Request body: {"model":"mxbai-embed-large","prompt":"what is tesnsor flow"}
+2025-11-17 12:22:16.395 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response status: 200
+2025-11-17 12:22:16.395 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response body: {"embedding":[0.010660604573786259,0.5891461372375488,0.03189638629555702,0.6032436490058899,-0.3151451051235199,0.055757809430360794,-0.6545037031173706,-0.2567214071750641,-0.15328052639961243,1.1418092250823975,-0.42215096950531006,0.2556309998035431,0.291975200176239,-0.7932841181755066,-0.3558199107646942,-0.24108292162418365,-0.013772237114608288,-0.5389400720596313,-0.9417068958282471,-0.367779940366745,-0.07664652913808823,0.032591499388217926,0.1773851066827774,-0.36745578050613403,-0.6
+2025-11-17 12:22:16.397 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: my_books (top 3)
+2025-11-17 12:22:16.463 [main] INFO  c.m.v.vectordb.ChromaDBClient - ✅ Query returned 3 results
+2025-11-17 12:22:16.463 [main] INFO  c.m.v.vectordb.VectorStore - ✅ Found 3 results
+2025-11-17 12:22:16.463 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Found 3 relevant passages
+2025-11-17 12:22:16.463 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [1] Relevance: {:.1f}% - Source: 67.99324663877086 (chunk mybook.pdf)
+2025-11-17 12:22:16.463 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [2] Relevance: {:.1f}% - Source: 67.73524708707279 (chunk mybook.pdf)
+2025-11-17 12:22:16.463 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   [3] Relevance: {:.1f}% - Source: 67.58147473915308 (chunk mybook.pdf)
+2025-11-17 12:22:16.464 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🤖 Generating answer with LLM...
+2025-11-17 12:22:16.464 [main] INFO  c.m.v.llm.SmartLLMRouter - 🧠 generate() called | prompt length = 20704 chars
+2025-11-17 12:22:16.870 [main] INFO  c.m.v.llm.SmartLLMRouter - 🚀 Using Groq (cloud)
+2025-11-17 12:22:16.870 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-17 12:22:17.523 [main] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (97 chars)
+2025-11-17 12:22:17.523 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - ✅ Answer generated in 1059ms

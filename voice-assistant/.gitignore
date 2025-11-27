@@ -1,16 +1,34 @@
+# Build
+target/
 *.class
 *.jar
-*.war
-target/
-*.log
-.idea/
-*.iml
-.vscode/
-.DS_Store
-*.wav
-*.mp3
+
+# Logs
 logs/
-.env
+*.log
+
+# ChromaDB
 chroma_data/
-models/vosk-*/
-__pycache__/
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Credentials
+*.env
+secrets.properties
+
+# Models (too large for git)
+models/
+*.ppn
+
+# Books (personal data)
+books/*.pdf
+!books/test-knowledge.txt
+books/*.epub
+books/*.mobiconfig/secrets.properties

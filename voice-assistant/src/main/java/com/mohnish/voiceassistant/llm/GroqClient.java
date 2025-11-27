@@ -122,4 +122,7 @@ public class GroqClient {
     public String getModel() {
         return model;
     }
+    public String generate(String prompt) throws Exception {
+    return chat(prompt);
+}
 }

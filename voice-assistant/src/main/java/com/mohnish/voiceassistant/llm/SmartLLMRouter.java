@@ -8,136 +8,116 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.List;
 
+/**
+ * Smart router that switches between Groq (cloud) and Ollama (local) LLMs
+ */
 public class SmartLLMRouter {
     private static final Logger logger = LoggerFactory.getLogger(SmartLLMRouter.class);
-    
-    private GroqClient groq;
-    private OllamaClient ollama;
+
+    private final GroqClient groq;
+    private final OllamaClient ollama;
     private boolean preferLocal = false;
-    private int requestCount = 0;
-    private int groqSuccessCount = 0;
-    private int ollamaFallbackCount = 0;
-    
+
     public SmartLLMRouter(String groqApiKey, String ollamaUrl) {
-        this.groq = new GroqClient(groqApiKey);
+        this.groq = groqApiKey != null ? new GroqClient(groqApiKey) : null;
         this.ollama = new OllamaClient(ollamaUrl);
-        logger.info("Smart LLM Router initialized");
+
+        logger.info("SmartLLMRouter initialized");
+        logger.info("Groq: {}", groq != null ? "Available" : "Not configured");
+        logger.info("Ollama: Available");
     }
-    
-    /**
-     * Generate response with automatic fallback
-     */
-    public String generate(String question) {
-        requestCount++;
-        logger.info("Processing request #{}", requestCount);
-        
-        // Try Groq first (unless local preferred)
-        if (!preferLocal && isOnline()) {
-            try {
-                logger.info("🚀 Using Groq (cloud)...");
-                long startTime = System.currentTimeMillis();
-                String response = groq.chat(question);
-                long duration = System.currentTimeMillis() - startTime;
-                groqSuccessCount++;
-                logger.info("✅ Groq response received in {}ms", duration);
-                return response;
-            } catch (Exception e) {
-                logger.warn("⚠️  Groq failed: {}", e.getMessage());
-                logger.info("Falling back to local Ollama...");
-            }
-        }
-        
-        // Fallback to Ollama
+
+    // ---------------------------------------------------------
+    // 1. EASY API — generate(String)
+    // ---------------------------------------------------------
+    public String generate(String prompt) {
+        return generate(prompt, List.of());
+    }
+
+    // ---------------------------------------------------------
+    // 2. MAIN ROUTER
+    // ---------------------------------------------------------
+    public String generate(String prompt, List<String> ctx) {
+        logger.info("🧠 generate() called | prompt length = {} chars", prompt.length());
+
+        // ---------- Try Groq cloud ----------
         try {
-            logger.info("🏠 Using Ollama (local)...");
-            long startTime = System.currentTimeMillis();
-            String response = ollama.chat(question);
-            long duration = System.currentTimeMillis() - startTime;
-            ollamaFallbackCount++;
-            logger.info("✅ Ollama response received in {}ms", duration);
-            return response;
+            if (!preferLocal && groq != null && isOnline()) {
+                logger.info("🚀 Using Groq (cloud)");
+                return groq.chat(prompt);   // ← FIXED (correct method)
+            }
+        } catch (Exception e) {
+            logger.warn("⚠ Groq failed: {}", e.getMessage());
+        }
+
+        // ---------- Use Local Ollama ----------
+        try {
+            logger.info("🏠 Using Ollama (local)");
+            return ollama.chat(prompt);      // ← FIXED (correct method)
         } catch (Exception e) {
             logger.error("❌ Both Groq and Ollama failed", e);
-            return "I'm sorry, I'm having trouble processing your request right now. Please try again.";
         }
+
+        return "I'm sorry, I'm having trouble generating a response right now.";
     }
-    
-    /**
-     * Check if internet is available
-     */
+
+    // ---------------------------------------------------------
+    // 3. NETWORK CHECK
+    // ---------------------------------------------------------
     private boolean isOnline() {
         try {
             HttpClient client = HttpClient.newBuilder()
-                .connectTimeout(Duration.ofSeconds(2))
-                .build();
-            
+                    .connectTimeout(Duration.ofSeconds(2))
+                    .build();
+
             HttpRequest request = HttpRequest.newBuilder()
-                .uri(new URI("https://api.groq.com"))
-                .timeout(Duration.ofSeconds(2))
-                .GET()
-                .build();
-            
+                    .uri(new URI("https://api.groq.com"))
+                    .timeout(Duration.ofSeconds(2))
+                    .GET()
+                    .build();
+
             HttpResponse<String> response = client.send(
-                request,
-                HttpResponse.BodyHandlers.ofString()
+                    request,
+                    HttpResponse.BodyHandlers.ofString()
             );
-            
+
             return response.statusCode() < 500;
         } catch (Exception e) {
-            logger.debug("Offline detection: {}", e.getMessage());
             return false;
         }
     }
-    
-    /**
-     * Test both connections
-     */
+
+    // ---------------------------------------------------------
+    // 4. CONNECTION TEST
+    // ---------------------------------------------------------
     public void testConnections() {
-        System.out.println("\n═══════════════════════════════════════");
-        System.out.println("    Testing LLM Connections");
-        System.out.println("═══════════════════════════════════════");
-        
-        // Test Groq
-        System.out.print("Testing Groq API... ");
-        if (groq.testConnection()) {
-            System.out.println("✅ Connected");
-        } else {
-            System.out.println("❌ Failed");
-        }
-        
-        // Test Ollama
-        System.out.print("Testing Ollama... ");
-        if (ollama.testConnection()) {
-            System.out.println("✅ Connected");
-        } else {
-            System.out.println("❌ Failed (is 'ollama serve' running?)");
-        }
-        
-        System.out.println("═══════════════════════════════════════\n");
+        boolean groqOk = groq != null && groq.testConnection();
+        boolean ollamaOk = ollama.testConnection();
+
+        logger.info("Groq: {} | Ollama: {}", groqOk ? "OK" : "Fail", ollamaOk ? "OK" : "Fail");
     }
-    
-    /**
-     * Get statistics
-     */
-    public String getStats() {
-        return String.format(
-            "Total requests: %d | Groq: %d | Ollama: %d",
-            requestCount, groqSuccessCount, ollamaFallbackCount
-        );
-    }
-    
-    // Getters and setters
+
+    // ---------------------------------------------------------
+    // 5. SETTINGS
+    // ---------------------------------------------------------
     public void setPreferLocal(boolean preferLocal) {
         this.preferLocal = preferLocal;
-        logger.info("Prefer local mode: {}", preferLocal);
+        logger.info("Prefer Local set to {}", preferLocal);
     }
-    
-    public boolean isPreferLocal() {
-        return preferLocal;
-    }
-    
-    public int getRequestCount() {
-        return requestCount;
-    }
+
+    public String getStats() {
+    return """
+        Smart LLM Router Stats:
+        ------------------------
+        Prefer Local: %s
+        Groq Configured: %s
+        Ollama Available: %s
+    """.formatted(
+        preferLocal,
+        (groq != null),
+        true
+    );
+}
 }
