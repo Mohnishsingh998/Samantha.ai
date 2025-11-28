@@ -3,6 +3,7 @@ package com.mohnish.voiceassistant.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,172 +12,206 @@ import java.util.Properties;
 public class ConfigLoader {
 
     private static final Logger logger = LoggerFactory.getLogger(ConfigLoader.class);
-    private static final String CONFIG_FILE = "config/assistant.properties";
-    private static Properties properties;
+    private static final Properties properties = new Properties();
+
+    // Possible locations for config
+    private static final String[] CONFIG_LOCATIONS = {
+            "config/assistant.properties",
+            "voice-assistant/config/assistant.properties",
+            "src/main/resources/assistant.properties"
+    };
 
     static {
-        loadConfig();
+        loadProperties();
     }
 
-    /**
-     * Load configuration from file
-     */
-    private static void loadConfig() {
-        properties = new Properties();
-
-        try (InputStream input = new FileInputStream(CONFIG_FILE)) {
-            properties.load(input);
-            logger.info("Configuration loaded from: {}", CONFIG_FILE);
-        } catch (IOException e) {
-            logger.warn("assistant.properties not found. Using default configuration.");
-            setDefaults();
+    // ============================================================
+    //  LOAD assistant.properties
+    // ============================================================
+    private static void loadProperties() {
+        for (String path : CONFIG_LOCATIONS) {
+            File file = new File(path);
+            if (file.exists()) {
+                try (FileInputStream fis = new FileInputStream(file)) {
+                    properties.load(fis);
+                    logger.info("✅ Loaded config from: {}", file.getAbsolutePath());
+                    return;
+                } catch (IOException e) {
+                    logger.warn("❌ Failed to load config from: {}", path);
+                }
+            }
         }
+
+        logger.warn("⚠️ assistant.properties NOT FOUND — Using DEFAULT configuration.");
+        setDefaults();
     }
 
-    /**
-     * Default configuration
-     */
+    // ============================================================
+    //  DEFAULT VALUES
+    // ============================================================
     private static void setDefaults() {
         properties.setProperty("tts.voice", "Samantha");
         properties.setProperty("tts.rate", "200");
 
-        properties.setProperty("llm.primary", "groq");
-        properties.setProperty("llm.groq.model", "llama-3.3-70b-versatile");
-        properties.setProperty("llm.ollama.model", "llama3.2:3b");
-        properties.setProperty("llm.ollama.url", "http://localhost:11434");
-
-        properties.setProperty("llm.max.tokens", "150");
-
-        properties.setProperty("audio.recording.duration", "5");
-        properties.setProperty("audio.sample.rate", "16000");
-
-        properties.setProperty("auto.speak.welcome", "true");
-        properties.setProperty("show.performance.stats", "true");
-        properties.setProperty("debug.mode", "false");
-        properties.setProperty("log.level", "INFO");
-
-        // Wake word defaults
         properties.setProperty("wake.word.enabled", "true");
         properties.setProperty("wake.word.path", "voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn");
         properties.setProperty("wake.word.sensitivity", "0.5");
+
+        properties.setProperty("audio.recording.duration", "5");
+
+        properties.setProperty("show.performance.stats", "true");
+
+        // LLM defaults
+        properties.setProperty("llm.primary", "groq");
+        properties.setProperty("llm.groq.model", "llama-3.3-70b-versatile");
+        properties.setProperty("llm.ollama.model", "llama3.2:3b");
+        properties.setProperty("ollama.url", "http://localhost:11434");
+
+        // RAG defaults
+        properties.setProperty("chroma.url", "http://localhost:8000");
+        properties.setProperty("chroma.collection", "knowledge_base");
     }
 
-    // Basic getters
-    public static String get(String key) {
-        return properties.getProperty(key);
-    }
-
+    // ============================================================
+    //  BASIC GETTERS
+    // ============================================================
     public static String get(String key, String defaultValue) {
         return properties.getProperty(key, defaultValue);
     }
 
+    public static String get(String key) {
+        return properties.getProperty(key);
+    }
+
     public static int getInt(String key, int defaultValue) {
         try {
-            String value = properties.getProperty(key);
-            return value != null ? Integer.parseInt(value) : defaultValue;
-        } catch (NumberFormatException e) {
-            logger.warn("Invalid integer for {}. Using default {}", key, defaultValue);
+            return Integer.parseInt(properties.getProperty(key, Integer.toString(defaultValue)));
+        } catch (Exception e) {
+            logger.warn("Invalid int for {}. Using default {}", key, defaultValue);
             return defaultValue;
         }
     }
 
     public static boolean getBoolean(String key, boolean defaultValue) {
-        String value = properties.getProperty(key);
-        return value != null ? Boolean.parseBoolean(value) : defaultValue;
+        return Boolean.parseBoolean(properties.getProperty(key, Boolean.toString(defaultValue)));
     }
 
-    // Convenience getters
+    // ============================================================
+    //  TTS
+    // ============================================================
     public static String getTTSVoice() { return get("tts.voice", "Samantha"); }
     public static int getTTSRate() { return getInt("tts.rate", 200); }
+
+    // ============================================================
+    //  LLM SETTINGS
+    // ============================================================
     public static String getPrimaryLLM() { return get("llm.primary", "groq"); }
     public static String getGroqModel() { return get("llm.groq.model", "llama-3.3-70b-versatile"); }
     public static String getOllamaModel() { return get("llm.ollama.model", "llama3.2:3b"); }
-    public static String getOllamaURL() { return get("llm.ollama.url", "http://localhost:11434"); }
-    public static int getMaxTokens() { return getInt("llm.max.tokens", 150); }
+    public static String getOllamaURL() { return get("ollama.url", "http://localhost:11434"); }
+
+    // ============================================================
+    //  RECORDING
+    // ============================================================
     public static int getRecordingDuration() { return getInt("audio.recording.duration", 5); }
-    public static boolean shouldAutoSpeakWelcome() { return getBoolean("auto.speak.welcome", true); }
     public static boolean shouldShowPerformanceStats() { return getBoolean("show.performance.stats", true); }
-    public static boolean isDebugMode() { return getBoolean("debug.mode", false); }
 
-    /**
-     * Secret key loader (safe)
-     */
-    public static String getPicovoiceAccessKey() {
-
-    // Get the actual working directory 
-    String baseDir = System.getProperty("user.dir");
-
-    // Correct, absolute path to secrets.properties
-    String secretsPath = baseDir + "/voice-assistant/config/secrets.properties";
-
-    System.out.println("DEBUG: Loading secrets from: " + secretsPath);
-
-    try (InputStream input = new FileInputStream(secretsPath)) {
-        Properties secrets = new Properties();
-        secrets.load(input);
-
-        String key = secrets.getProperty("PICOVOICE_ACCESS_KEY");
-        if (key != null && !key.isEmpty()) {
-            return key;
-        }
-    } catch (IOException e) {
-        // Show error so user knows the file wasn't found
-        System.out.println("DEBUG: Could not load secrets.properties at: " + secretsPath);
+    // ============================================================
+    //  RAG / CHROMA DB
+    // ============================================================
+    public static String getChromaDBUrl() {
+        return get("chroma.url", "http://localhost:8000");
     }
 
-    // Fallback to environment variable
-    String envKey = System.getenv("PICOVOICE_ACCESS_KEY");
-    if (envKey == null || envKey.isEmpty()) {
+    public static String getCollectionName() {
+        return get("chroma.collection", "knowledge_base");
+    }
+
+    // ============================================================
+    //  PICOVOICE ACCESS KEY
+    // ============================================================
+    public static String getPicovoiceAccessKey() {
+        String[] secretLocations = {
+                "voice-assistant/config/secrets.properties",
+                "config/secrets.properties"
+        };
+
+        for (String path : secretLocations) {
+            File file = new File(path);
+            if (file.exists()) {
+                try (FileInputStream fis = new FileInputStream(file)) {
+                    Properties secrets = new Properties();
+                    secrets.load(fis);
+
+                    String key = secrets.getProperty("PICOVOICE_ACCESS_KEY");
+                    if (key != null && !key.trim().isEmpty()) {
+                        logger.info("🔑 Loaded Picovoice key from {}", file.getAbsolutePath());
+                        return key.trim();
+                    }
+                } catch (Exception ignore) { }
+            }
+        }
+
+        // Fallback env var
+        String envKey = System.getenv("PICOVOICE_ACCESS_KEY");
+        if (envKey != null && !envKey.trim().isEmpty()) {
+            return envKey.trim();
+        }
+
         throw new RuntimeException(
-            "Picovoice access key missing.\n" +
-            "Expected at: " + secretsPath + "\n" +
-            "Or set environment variable PICOVOICE_ACCESS_KEY"
+                "❌ Picovoice Access Key NOT FOUND!\n" +
+                "Create secrets.properties in:\n" +
+                "  • voice-assistant/config/secrets.properties\n" +
+                "or set environment variable PICOVOICE_ACCESS_KEY."
         );
     }
 
-    return envKey;
-}
-
-
-    /**
-     * Wake Word Settings
-     */
+    // ============================================================
+    //  WAKE WORD
+    // ============================================================
     public static boolean isWakeWordEnabled() {
         return getBoolean("wake.word.enabled", true);
     }
 
     public static String getWakeWordPath() {
-        return get("wake.word.path", "lib/porcupine/samantha_en_mac_v3_0_0.ppn");
+        return get(
+                "wake.word.path",
+                "voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn"
+        );
     }
 
     public static float getWakeWordSensitivity() {
         try {
             return Float.parseFloat(get("wake.word.sensitivity", "0.5"));
         } catch (Exception e) {
-            logger.warn("Invalid wake.word.sensitivity. Using default 0.5");
+            logger.warn("Invalid wake.word.sensitivity — using 0.5");
             return 0.5f;
         }
     }
 
-    /**
-     * Print configuration
-     */
+    // ============================================================
+    //  PRINT CONFIG
+    // ============================================================
     public static void printConfig() {
-        System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║            Current Configuration        ║");
-        System.out.println("╚════════════════════════════════════════╝");
+        System.out.println("\n📋 Current Configuration:");
+        System.out.println("  TTS Voice            : " + getTTSVoice());
+        System.out.println("  TTS Rate             : " + getTTSRate());
+        System.out.println("  Primary LLM          : " + getPrimaryLLM());
+        System.out.println("  Ollama URL           : " + getOllamaURL());
+        System.out.println("  Recording Duration   : " + getRecordingDuration() + " sec");
+        System.out.println("  Performance Stats    : " + shouldShowPerformanceStats());
 
-        System.out.println("TTS Voice        : " + getTTSVoice());
-        System.out.println("TTS Rate         : " + getTTSRate());
-        System.out.println("Primary LLM      : " + getPrimaryLLM());
-        System.out.println("Groq Model       : " + getGroqModel());
-        System.out.println("Ollama Model     : " + getOllamaModel());
-        System.out.println("Wake Word Enabled: " + isWakeWordEnabled());
-        System.out.println("Wake Word Path   : " + getWakeWordPath());
-        System.out.println("Sensitivity      : " + getWakeWordSensitivity());
-        System.out.println("Max Tokens       : " + getMaxTokens());
-        System.out.println("Record Sec       : " + getRecordingDuration());
+        System.out.println("\n🔔 Wake Word:");
+        System.out.println("  Enabled              : " + isWakeWordEnabled());
+        if (isWakeWordEnabled()) {
+            System.out.println("  Path                 : " + getWakeWordPath());
+            System.out.println("  Sensitivity          : " + getWakeWordSensitivity());
+        }
 
-        System.out.println("══════════════════════════════════════════\n");
+        System.out.println("\n📚 RAG:");
+        System.out.println("  Chroma URL           : " + getChromaDBUrl());
+        System.out.println("  Collection           : " + getCollectionName());
+
+        System.out.println();
     }
 }

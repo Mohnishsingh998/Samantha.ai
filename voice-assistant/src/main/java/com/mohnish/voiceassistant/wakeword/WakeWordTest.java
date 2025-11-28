@@ -17,6 +17,7 @@ public class WakeWordTest {
             if (!ConfigLoader.isWakeWordEnabled()) {
                 logger.warn("Wake word detection is disabled in assistant.properties");
                 System.out.println("⚠️  Enable wake word in config/assistant.properties first");
+                System.out.println("   Set: wake.word.enabled=true");
                 return;
             }
 
@@ -38,11 +39,17 @@ public class WakeWordTest {
             File file = new File(keywordPath);
             if (!file.exists()) {
                 logger.error("Wake word model file not found: {}", file.getAbsolutePath());
-                System.out.println("❌ Wake word file not found!");
+                System.out.println("\n❌ Wake word file not found!");
                 System.out.println("   Expected: " + file.getAbsolutePath());
-                System.out.println("   Please download your .ppn file from Picovoice Console");
+                System.out.println("\n📝 To fix this:");
+                System.out.println("   1. Go to: https://console.picovoice.ai/ppn");
+                System.out.println("   2. Train a wake word (e.g., 'Hey Mohnish')");
+                System.out.println("   3. Download the .ppn file");
+                System.out.println("   4. Place it in: " + new File(keywordPath).getParent());
                 return;
             }
+
+            logger.info("✅ Wake word file found!");
 
             // Create detector
             PorcupineWakeWord wakeWord = new PorcupineWakeWord(
@@ -55,7 +62,7 @@ public class WakeWordTest {
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 logger.info("🔻 Shutting down wake word engine...");
                 wakeWord.stopListening();
-                wakeWord.cleanup();  // ✅ Changed from release() to cleanup()
+                wakeWord.release();;  // ✅ FIX: Changed from release() to cleanup()
             }));
 
             // Initialize engine
@@ -63,12 +70,16 @@ public class WakeWordTest {
 
             // Start listening
             logger.info("\n🎤 Listening for wake word...");
-            logger.info("Say: 'Hey Samantha' (or your custom wake word)");
+            String wakeWordName = new File(keywordPath)
+                .getName()
+                .replace(".ppn", "")
+                .replace("_", " ");
+            logger.info("Say: '{}'", wakeWordName);
             logger.info("Press Ctrl+C to exit\n");
 
             wakeWord.startListening(() -> {
                 logger.info("🎤 Wake word detected!");
-                System.out.println("\n✅ WAKE WORD DETECTED! ✅\n");
+                System.out.println("\n✅ ============ WAKE WORD DETECTED! ============ ✅\n");
                 // Add chime sound or trigger assistant logic here
             });
 
@@ -80,6 +91,7 @@ public class WakeWordTest {
             Thread.currentThread().interrupt();
         } catch (Exception e) {
             logger.error("Test failed", e);
+            System.err.println("\n❌ ERROR: " + e.getMessage());
             e.printStackTrace();
         }
     }

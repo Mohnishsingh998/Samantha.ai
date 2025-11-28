@@ -76,8 +76,22 @@ public class VoiceAssistant {
      */
     public void initializeRAG() throws Exception {
         logger.info("Initializing RAG pipeline...");
-        this.ragPipeline = new RAGPipeline();
+        
+        // ✅ FIX: Get required configuration parameters
+        String chromaUrl = ConfigLoader.getChromaDBUrl();
+        String ollamaUrl = ConfigLoader.getOllamaURL();
+        String collectionName = ConfigLoader.getCollectionName();
+        String groqApiKey = System.getenv("GROQ_API_KEY");
+        
+        logger.info("RAG Configuration:");
+        logger.info("  ChromaDB: {}", chromaUrl);
+        logger.info("  Ollama: {}", ollamaUrl);
+        logger.info("  Collection: {}", collectionName);
+        
+        // ✅ FIX: Pass required parameters to RAGPipeline constructor
+        this.ragPipeline = new RAGPipeline(chromaUrl, ollamaUrl, collectionName, groqApiKey);
         this.useRAG = true;
+        
         logger.info("RAG pipeline initialized successfully!");
     }
 
@@ -170,8 +184,9 @@ public class VoiceAssistant {
             startTime = System.currentTimeMillis();
             String answer;
             
+            // ✅ FIX: Changed from query() to answer()
             if (useRAG && ragPipeline != null) {
-                answer = ragPipeline.query(question);
+                answer = ragPipeline.answer(question);
                 System.out.println("   📚 (Answer from your books)");
             } else {
                 answer = llm.generate(question);
@@ -264,6 +279,7 @@ public class VoiceAssistant {
                         tts.speak("RAG mode enabled. I can now answer from your books.");
                     } catch (Exception e) {
                         System.out.println("❌ Failed to initialize RAG: " + e.getMessage());
+                        logger.error("RAG initialization failed", e);
                     }
                 } else {
                     useRAG = !useRAG;
@@ -351,8 +367,9 @@ public class VoiceAssistant {
         startTime = System.currentTimeMillis();
         String answer;
         
+        // ✅ FIX: Changed from query() to answer()
         if (useRAG && ragPipeline != null) {
-            answer = ragPipeline.query(question);
+            answer = ragPipeline.answer(question);
             System.out.println("   📚 (Using RAG - answer from your books)");
         } else {
             answer = llm.generate(question);
@@ -425,7 +442,7 @@ public class VoiceAssistant {
         if (wakeWord != null) {
             logger.info("Stopping wake word detection...");
             wakeWord.stopListening();
-            wakeWord.cleanup();
+            wakeWord.release();
         }
     }
 
