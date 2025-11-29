@@ -242,7 +242,7 @@ This is a personal learning project, but suggestions are welcome!
 
 **Mohnish Singh Yadav**
 - GitHub: [@Mohnishsingh998]((https://github.com/Mohnishsingh998))
-- LinkedIn: [mohnishsingh](https://www.linkedin.com/in/mohnishsingh-yadav-86916b257/)
+- LinkedIn: [@Mohnishsingh](https://www.linkedin.com/in/mohnishsingh-yadav-86916b257/)
 
 ---
 
