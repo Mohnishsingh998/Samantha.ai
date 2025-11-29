@@ -4,200 +4,177 @@ import com.mohnish.voiceassistant.document.DocumentChunk;
 import com.mohnish.voiceassistant.document.DocumentParser;
 import com.mohnish.voiceassistant.document.TextChunker;
 import com.mohnish.voiceassistant.embedding.EmbeddingGenerator;
+import com.mohnish.voiceassistant.utils.ConfigLoader;
 import com.mohnish.voiceassistant.vectordb.ChromaDBClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class KnowledgeBaseIndexer {
+
     private static final Logger logger = LoggerFactory.getLogger(KnowledgeBaseIndexer.class);
-    
+
     private final DocumentParser parser;
     private final TextChunker chunker;
     private final EmbeddingGenerator embeddingGenerator;
     private final ChromaDBClient chromaClient;
     private final String collectionName;
-    
+
     public KnowledgeBaseIndexer(String chromaUrl, String ollamaUrl, String collectionName) {
         this.parser = new DocumentParser();
         this.chunker = new TextChunker();
         this.embeddingGenerator = new EmbeddingGenerator(ollamaUrl);
         this.chromaClient = new ChromaDBClient(chromaUrl);
         this.collectionName = collectionName;
-        
-        logger.info("Knowledge Base Indexer initialized");
-        logger.info("Collection: {}", collectionName);
+
+        logger.info("📚 Knowledge Base Indexer initialized");
+        logger.info("   • ChromaDB : {}", chromaUrl);
+        logger.info("   • Ollama   : {}", ollamaUrl);
+        logger.info("   • Collection: {}", collectionName);
     }
-    
-    /**
-     * Initialize the collection (create if doesn't exist)
-     */
+
+    // ---------------------------------------------------------
+    //  INDEXING LOGIC
+    // ---------------------------------------------------------
+
     public void initializeCollection() throws Exception {
-        logger.info("Initializing collection: {}", collectionName);
+        logger.info("⚙ Initializing collection...");
         chromaClient.createCollection(collectionName);
-        logger.info("✅ Collection ready");
+        logger.info("✅ Collection is ready");
     }
-    
-    /**
-     * Index a single book
-     */
+
     public IndexingResult indexBook(File bookFile) throws Exception {
-        logger.info("Starting to index book: {}", bookFile.getName());
+        logger.info("----------------------------------------------------");
+        logger.info("📘 Indexing book: {}", bookFile.getName());
+
         long startTime = System.currentTimeMillis();
-        
         IndexingResult result = new IndexingResult(bookFile.getName());
-        
+
         try {
-            // Step 1: Extract text
-            logger.info("Step 1/4: Extracting text...");
+            // Extract text
+            logger.info("1️⃣ Extracting text...");
             String text = parser.extractText(bookFile);
             result.setCharactersExtracted(text.length());
-            logger.info("✅ Extracted {} characters", text.length());
-            
-            // Step 2: Chunk text
-            logger.info("Step 2/4: Chunking text...");
+            logger.info("   ✔ Extracted {} characters", text.length());
+
+            // Chunk text
+            logger.info("2️⃣ Chunking text...");
             List<DocumentChunk> chunks = chunker.chunkText(text, bookFile.getName());
             result.setChunksCreated(chunks.size());
-            logger.info("✅ Created {} chunks", chunks.size());
-            
-            // Step 3: Generate embeddings
-            logger.info("Step 3/4: Generating embeddings...");
+            logger.info("   ✔ Created {} chunks", chunks.size());
+
+            // Generate embeddings
+            logger.info("3️⃣ Generating embeddings (this may take time)...");
             List<List<Double>> embeddings = embeddingGenerator.generateForChunks(chunks);
             result.setEmbeddingsGenerated(embeddings.size());
-            logger.info("✅ Generated {} embeddings", embeddings.size());
-            
-            // Step 4: Store in ChromaDB
-            logger.info("Step 4/4: Storing in ChromaDB...");
+            logger.info("   ✔ Generated {} embeddings", embeddings.size());
+
+            // Store in Chroma
+            logger.info("4️⃣ Storing in ChromaDB...");
             storeChunksInChroma(chunks, embeddings);
             result.setChunksStored(chunks.size());
-            logger.info("✅ Stored {} chunks in database", chunks.size());
-            
+            logger.info("   ✔ Stored {} chunks", chunks.size());
+
             long duration = System.currentTimeMillis() - startTime;
             result.setDurationMs(duration);
             result.setSuccess(true);
-            
-            logger.info("✅ Successfully indexed book in {}ms", duration);
+
+            logger.info("🎉 Finished indexing {} in {}ms", bookFile.getName(), duration);
             return result;
-            
+
         } catch (Exception e) {
-            logger.error("Failed to index book: {}", bookFile.getName(), e);
+            logger.error("❌ Failed to index book {}", bookFile.getName(), e);
             result.setSuccess(false);
             result.setErrorMessage(e.getMessage());
             throw e;
         }
     }
-    
-    /**
-     * Store chunks with their embeddings in ChromaDB
-     */
-    private void storeChunksInChroma(List<DocumentChunk> chunks, List<List<Double>> embeddings) 
+
+    private void storeChunksInChroma(List<DocumentChunk> chunks, List<List<Double>> embeddings)
             throws Exception {
-        
+
         if (chunks.size() != embeddings.size()) {
             throw new IllegalArgumentException("Chunks and embeddings size mismatch");
         }
-        
-        // Prepare data for ChromaDB
+
         List<String> ids = new ArrayList<>();
         List<String> documents = new ArrayList<>();
         List<Map<String, String>> metadatas = new ArrayList<>();
-        
+
         for (int i = 0; i < chunks.size(); i++) {
-            DocumentChunk chunk = chunks.get(i);
-            
-            ids.add(chunk.getId());
-            documents.add(chunk.getText());
-            
-            Map<String, String> metadata = new HashMap<>();
-            metadata.put("source", chunk.getSourceFile());
-            metadata.put("chunk_index", String.valueOf(chunk.getChunkIndex()));
-            metadatas.add(metadata);
+            DocumentChunk c = chunks.get(i);
+
+            ids.add(c.getId());
+            documents.add(c.getText());
+
+            Map<String, String> meta = new HashMap<>();
+            meta.put("source", c.getSourceFile());
+            meta.put("chunk_index", String.valueOf(c.getChunkIndex()));
+
+            metadatas.add(meta);
         }
-        
-        // Store in ChromaDB
+
         chromaClient.addDocuments(collectionName, ids, embeddings, documents, metadatas);
     }
-    
-    /**
-     * Index multiple books
-     */
+
     public List<IndexingResult> indexBooks(List<File> bookFiles) throws Exception {
-        logger.info("Starting to index {} books", bookFiles.size());
-        
+        logger.info("📚 Indexing {} books", bookFiles.size());
         List<IndexingResult> results = new ArrayList<>();
-        
-        for (int i = 0; i < bookFiles.size(); i++) {
-            File bookFile = bookFiles.get(i);
-            logger.info("\n=== Indexing book {}/{}: {} ===", 
-                i + 1, bookFiles.size(), bookFile.getName());
-            
-            try {
-                IndexingResult result = indexBook(bookFile);
-                results.add(result);
-                
-                // Small delay between books
-                if (i < bookFiles.size() - 1) {
-                    Thread.sleep(1000);
-                }
-                
-            } catch (Exception e) {
-                logger.error("Failed to index book: {}", bookFile.getName(), e);
-                IndexingResult failedResult = new IndexingResult(bookFile.getName());
-                failedResult.setSuccess(false);
-                failedResult.setErrorMessage(e.getMessage());
-                results.add(failedResult);
-            }
+
+        for (File file : bookFiles) {
+            results.add(indexBook(file));
         }
-        
-        logger.info("\n✅ Indexing complete!");
-        logger.info("Successfully indexed: {}/{}", 
-            results.stream().filter(IndexingResult::isSuccess).count(),
-            results.size());
-        
         return results;
     }
-    
-    /**
-     * Index all books in a directory
-     */
+
     public List<IndexingResult> indexDirectory(String directoryPath) throws Exception {
-        File directory = new File(directoryPath);
-        
-        if (!directory.exists() || !directory.isDirectory()) {
-            throw new IllegalArgumentException("Directory not found: " + directoryPath);
-        }
-        
-        File[] files = directory.listFiles((dir, name) -> 
-            name.toLowerCase().endsWith(".pdf"));
-        
-        if (files == null || files.length == 0) {
-            logger.warn("No PDF files found in directory: {}", directoryPath);
+        File dir = new File(directoryPath);
+        if (!dir.exists()) throw new IllegalArgumentException("Directory not found: " + directoryPath);
+
+        File[] pdfs = dir.listFiles((d, n) -> n.toLowerCase().endsWith(".pdf") || n.endsWith(".txt"));
+        if (pdfs == null || pdfs.length == 0) {
+            logger.warn("⚠ No PDF/TXT files in directory {}", directoryPath);
             return new ArrayList<>();
         }
-        
-        List<File> bookFiles = List.of(files);
-        logger.info("Found {} PDF files to index", bookFiles.size());
-        
-        return indexBooks(bookFiles);
+
+        logger.info("📁 Found {} files to index", pdfs.length);
+        return indexBooks(List.of(pdfs));
     }
-    
-    /**
-     * Get collection statistics
-     */
-    public Map<String, Object> getCollectionStats() {
-        Map<String, Object> stats = new HashMap<>();
+
+    // ---------------------------------------------------------
+    //  MAIN METHOD (needed for Maven exec)
+    // ---------------------------------------------------------
+
+    public static void main(String[] args) {
         try {
-            // This would query ChromaDB for collection info
-            stats.put("collection", collectionName);
-            stats.put("status", "active");
+            logger.info("====================================================");
+            logger.info("🚀 STARTING KNOWLEDGE BASE INDEXER");
+
+            // Load assistant.properties
+            // Read config values
+            String chromaUrl = ConfigLoader.getChromaDBUrl();
+            String ollamaUrl = ConfigLoader.getOllamaURL();
+            String collection = ConfigLoader.getCollectionName();
+
+            logger.info("Chroma URL   : {}", chromaUrl);
+            logger.info("Ollama URL   : {}", ollamaUrl);
+            logger.info("Collection   : {}", collection);
+
+            String booksDir = "books"; // default
+
+            KnowledgeBaseIndexer indexer =
+                    new KnowledgeBaseIndexer(chromaUrl, ollamaUrl, collection);
+
+            indexer.initializeCollection();
+            indexer.indexDirectory(booksDir);
+
+            logger.info("🎉 INDEXING COMPLETE");
+            logger.info("====================================================");
+
         } catch (Exception e) {
-            logger.error("Failed to get stats", e);
+            logger.error("❌ Indexer failed: {}", e.getMessage(), e);
         }
-        return stats;
     }
 }

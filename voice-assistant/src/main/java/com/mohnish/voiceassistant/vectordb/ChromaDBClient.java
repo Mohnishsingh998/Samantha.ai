@@ -132,9 +132,17 @@ public class ChromaDBClient {
      * Get collection ID
      */
     private String getCollectionId(String collectionName) throws IOException {
+    try {
+        JsonObject collection = getCollectionInfo(collectionName);
+        return collection.get("id").getAsString();
+    } catch (IOException e) {
+        // Auto-create missing collection
+        createCollection(collectionName);
         JsonObject collection = getCollectionInfo(collectionName);
         return collection.get("id").getAsString();
     }
+}
+
     
     /**
      * Add documents with embeddings to collection (v2 API)

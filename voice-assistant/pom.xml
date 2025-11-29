@@ -2,6 +2,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mohnish</groupId>
@@ -20,71 +21,71 @@
     </properties>
 
     <dependencies>
+
+        <!-- OkHttp (only once — duplicate removed) -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
         </dependency>
-         <!-- Apache PDFBox for PDF parsing -->
+
+        <!-- Apache PDFBox for PDF parsing -->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
             <version>2.0.30</version>
         </dependency>
 
-        <!-- Apache Tika for document detection -->
+        <!-- Apache Tika -->
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
             <version>2.9.1</version>
         </dependency>
-        <!-- json formate -->
+
+        <!-- JSON.org -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20230227</version>
         </dependency>
 
-        <!-- OkHttp for ChromaDB HTTP client -->
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>4.12.0</version>
-        </dependency>
-
-        <!-- Apache Commons IO for file utilities -->
+        <!-- Apache Commons IO -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.15.1</version>
         </dependency>
 
-        <!-- JNA for native library support -->
+        <!-- JNA -->
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.14.0</version>
         </dependency>
-        <!-- Add this inside <dependencies> section -->
+
+        <!-- Picovoice Porcupine -->
         <dependency>
             <groupId>ai.picovoice</groupId>
             <artifactId>porcupine-java</artifactId>
             <version>3.0.2</version>
         </dependency>
-        <!-- JSON Processing (Gson) -->
+
+        <!-- Gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
 
-        <!-- Logging -->
+        <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>2.0.9</version>
         </dependency>
 
+        <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -98,18 +99,20 @@
             <version>3.13.0</version>
         </dependency>
 
-        <!-- JUnit Testing -->
+        <!-- JUnit -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin -->
+
+            <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -120,14 +123,15 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Exec Plugin -->
+            <!-- Exec Plugin (FIXED!) -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.6.2</version>
                 <configuration>
-                    <!-- ✅ CHANGED: Use EnhancedVoiceLoopTest as default -->
-                    <mainClass>com.mohnish.voiceassistant.VoiceAssistant</mainClass>
+                    <!-- Allow overriding via -Dexec.mainClass -->
+                    <mainClass>${exec.mainClass}</mainClass>
+
                     <systemProperties>
                         <systemProperty>
                             <key>java.library.path</key>
@@ -137,7 +141,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Shade Plugin -->
+            <!-- Shade Plugin – keeps VoiceAssistant as JAR entry point -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -151,6 +155,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <!-- JAR default entry -->
                                     <mainClass>com.mohnish.voiceassistant.VoiceAssistant</mainClass>
                                 </transformer>
                             </transformers>
@@ -158,6 +163,8 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
+
 </project>

@@ -54,7 +54,15 @@ public class ConfigLoader {
         properties.setProperty("tts.rate", "200");
 
         properties.setProperty("wake.word.enabled", "true");
-        properties.setProperty("wake.word.path", "voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn");
+        String path1 = "lib/porcupine/samantha_en_mac_v3_0_0.ppn";
+        String path2 = "voice-assistant/voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn";
+
+        if (new File(path1).exists()) {
+            properties.setProperty("wake.word.path", path1);
+        } else {
+            properties.setProperty("wake.word.path", path2);
+        }
+
         properties.setProperty("wake.word.sensitivity", "0.5");
 
         properties.setProperty("audio.recording.duration", "5");

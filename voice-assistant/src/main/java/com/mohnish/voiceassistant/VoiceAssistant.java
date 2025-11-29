@@ -111,7 +111,7 @@ public class VoiceAssistant {
         System.out.println("║   🤖 AI VOICE ASSISTANT - WAKE WORD MODE ║");
         System.out.println("╚═══════════════════════════════════════════╝");
         System.out.println();
-        System.out.println("🎤 Say 'Hey Mohnish' to activate");
+        System.out.println("🎤 Say 'hey samantha' to activate");
         System.out.println("Press Ctrl+C to exit");
         System.out.println();
 
@@ -123,7 +123,7 @@ public class VoiceAssistant {
         System.out.println();
 
         // Welcome message
-        String welcome = "Wake word mode activated. Say Hey Mohnish to ask me anything.";
+        String welcome = "Wake word mode activated. Say hey samantha to ask me anything.";
         tts.speak(welcome);
 
         // Start listening for wake word
@@ -219,7 +219,7 @@ public class VoiceAssistant {
             perfMonitor.recordInteraction(sttTime, llmTime, ttsTime, totalTime);
             
             System.out.println("\n✅ Ready for next question");
-            System.out.println("   Say 'Hey Mohnish' again to ask another question");
+            System.out.println("   Say 'hey samantha' again to ask another question");
             
         } catch (Exception e) {
             logger.error("Error processing query", e);
@@ -488,7 +488,7 @@ public class VoiceAssistant {
         ConfigLoader.printConfig();
 
         // Parse command line arguments
-        String mode = "manual";  // default mode
+        String mode = "wakeword";  // default mode
         boolean enableRAG = false;
         
         for (String arg : args) {

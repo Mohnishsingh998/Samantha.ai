@@ -1,0 +1,262 @@
+2025-11-28 01:30:15.923 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:30:15.927 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:30:15.929 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:37:55.125 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:37:55.126 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:37:55.127 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:42:18.902 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:42:18.903 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:42:18.904 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:44:35.934 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:44:35.935 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:44:35.936 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:44:52.255 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:44:52.256 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:44:52.257 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:47:15.568 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:47:15.569 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:47:15.570 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:120)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:53:56.155 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:53:56.156 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:53:56.156 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Add to config/secrets.properties or export PICOVOICE_ACCESS_KEY.
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:117)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 01:59:58.854 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 01:59:58.855 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 01:59:58.856 [main] ERROR c.m.v.wakeword.WakeWordTest - Test failed
+java.lang.RuntimeException: Picovoice access key missing.
+Expected at: /Users/mohnishsinghyadav/Projects/voice-assistant/config/secrets.properties
+Or set environment variable PICOVOICE_ACCESS_KEY
+	at com.mohnish.voiceassistant.utils.ConfigLoader.getPicovoiceAccessKey(ConfigLoader.java:130)
+	at com.mohnish.voiceassistant.wakeword.WakeWordTest.main(WakeWordTest.java:23)
+2025-11-28 02:04:13.117 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 02:04:13.118 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 02:04:13.119 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 02:04:13.120 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 02:04:13.120 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 02:04:13.120 [main] ERROR c.m.v.wakeword.WakeWordTest - Wake word model file not found: /Users/mohnishsinghyadav/Projects/voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 02:07:05.353 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 02:07:05.354 [main] WARN  c.m.v.utils.ConfigLoader - assistant.properties not found. Using default configuration.
+2025-11-28 02:07:05.355 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 02:07:05.356 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 02:07:05.356 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 02:07:05.357 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Initializing Porcupine...
+2025-11-28 02:07:07.494 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Porcupine initialized.
+2025-11-28 02:07:07.495 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Sample Rate  : 16000
+2025-11-28 02:07:07.495 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Frame Length : 512
+2025-11-28 02:07:07.495 [main] INFO  c.m.v.wakeword.WakeWordTest - 
+🎤 Listening for wake word...
+2025-11-28 02:07:07.496 [main] INFO  c.m.v.wakeword.WakeWordTest - Say: 'Hey Samantha'
+2025-11-28 02:07:07.496 [main] INFO  c.m.v.wakeword.WakeWordTest - Press Ctrl+C to exit
+
+2025-11-28 02:07:07.498 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Listening for wake word: samantha_en_mac_v3_0_0
+2025-11-28 02:07:07.727 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone opened.
+2025-11-28 02:07:23.502 [Thread-0] INFO  c.m.v.wakeword.WakeWordTest - 🔻 Shutting down wake word engine...
+2025-11-28 02:07:23.504 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Stopping wake-word listener...
+2025-11-28 02:07:23.513 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone closed (listening stopped).
+2025-11-28 02:07:23.513 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Wake-word listener stopped.
+2025-11-28 02:07:23.514 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Releasing PorcupineWakeWord resources...
+2025-11-28 02:07:23.514 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - PorcupineWakeWord released.
+2025-11-28 23:10:06.685 [main] INFO  c.m.v.utils.ConfigLoader - ✅ Loaded config from: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/assistant.properties
+2025-11-28 23:10:06.690 [main] INFO  c.m.voiceassistant.VoiceAssistant - Initializing Voice Assistant...
+2025-11-28 23:10:08.876 [main] INFO  c.m.v.audio.MicrophoneCapture - Microphone initialized successfully
+2025-11-28 23:10:08.897 [main] INFO  c.m.v.audio.MacOSSTTEngine - MacOS STT Engine initialized
+2025-11-28 23:10:08.897 [main] INFO  c.m.v.audio.MacOSSTTEngine - Using macOS built-in speech recognition
+2025-11-28 23:10:08.898 [main] INFO  c.m.v.audio.MacOSTTSEngine - TTS Engine initialized with voice: Samantha, rate: 200
+2025-11-28 23:10:09.034 [main] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
+2025-11-28 23:10:09.035 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
+2025-11-28 23:10:09.040 [main] INFO  c.m.v.llm.SmartLLMRouter - SmartLLMRouter initialized
+2025-11-28 23:10:09.040 [main] INFO  c.m.v.llm.SmartLLMRouter - Groq: Available
+2025-11-28 23:10:09.040 [main] INFO  c.m.v.llm.SmartLLMRouter - Ollama: Available
+2025-11-28 23:10:09.040 [main] INFO  c.m.voiceassistant.VoiceAssistant - Voice Assistant initialized successfully!
+2025-11-28 23:10:09.042 [main] INFO  c.m.voiceassistant.llm.GroqClient - Sending request to Groq API
+2025-11-28 23:10:09.928 [main] INFO  c.m.voiceassistant.llm.GroqClient - Received response from Groq (2 chars)
+2025-11-28 23:10:09.928 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Sending request to Ollama
+2025-11-28 23:10:17.835 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Received response from Ollama (48 chars)
+2025-11-28 23:10:17.837 [main] INFO  c.m.v.llm.SmartLLMRouter - Groq: OK | Ollama: OK
+2025-11-28 23:10:17.837 [main] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'Hello! I am your AI voice assistant. I can answer any question you have. Press enter to start.'
+2025-11-28 23:10:25.991 [main] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-28 23:10:35.444 [main] INFO  c.m.voiceassistant.VoiceAssistant - Initializing RAG pipeline...
+2025-11-28 23:10:35.444 [main] INFO  c.m.voiceassistant.VoiceAssistant - RAG Configuration:
+2025-11-28 23:10:35.444 [main] INFO  c.m.voiceassistant.VoiceAssistant -   ChromaDB: http://localhost:8000
+2025-11-28 23:10:35.444 [main] INFO  c.m.voiceassistant.VoiceAssistant -   Ollama: http://localhost:11434
+2025-11-28 23:10:35.444 [main] INFO  c.m.voiceassistant.VoiceAssistant -   Collection: knowledge_base
+2025-11-28 23:10:35.494 [main] INFO  c.m.v.vectordb.ChromaDBClient - ChromaDB client initialized (v2 API): http://localhost:8000
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.embedding.OllamaEmbeddings - Ollama Embeddings initialized with model: mxbai-embed-large
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.embedding.EmbeddingGenerator - Embedding Generator initialized
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.vectordb.VectorStore - VectorStore initialized for collection: knowledge_base
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.llm.GroqClient - Groq client initialized with model: llama-3.3-70b-versatile
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.llm.OllamaClient - Ollama client initialized with model: llama3.2:3b
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.llm.SmartLLMRouter - SmartLLMRouter initialized
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.llm.SmartLLMRouter - Groq: Available
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.llm.SmartLLMRouter - Ollama: Available
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - RAG Pipeline initialized
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Top-K: 3
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Relevance threshold: 0.5
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.rag.RAGPipeline -   Max history: 5
+2025-11-28 23:10:35.495 [main] INFO  c.m.voiceassistant.VoiceAssistant - RAG pipeline initialized successfully!
+2025-11-28 23:10:35.495 [main] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'RAG mode enabled. I can now answer from your books.'
+2025-11-28 23:10:39.119 [main] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-28 23:10:41.660 [main] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm listening'
+2025-11-28 23:10:43.279 [main] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-28 23:10:43.432 [main] INFO  c.m.v.audio.MicrophoneCapture - Recording for 5 seconds...
+2025-11-28 23:10:48.470 [main] INFO  c.m.v.audio.MicrophoneCapture - Recording completed. Captured 156800 bytes
+2025-11-28 23:10:48.476 [main] INFO  c.m.v.audio.MacOSSTTEngine - Transcribing audio file: audio-3360858675396293106.wav
+2025-11-28 23:10:49.789 [main] INFO  c.m.v.audio.MacOSSTTEngine - Transcription: 'what is machine learning'
+2025-11-28 23:10:49.789 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - Processing question: 'what is machine learning'
+2025-11-28 23:10:49.789 [main] INFO  c.m.voiceassistant.rag.RAGPipeline - 🔍 Searching knowledge base (top 3)
+2025-11-28 23:10:49.790 [main] INFO  c.m.v.vectordb.VectorStore - Searching for: 'what is machine learning' (top 3)
+2025-11-28 23:10:49.790 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Generating embedding for text length: 24
+2025-11-28 23:10:49.790 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Request body: {"model":"mxbai-embed-large","prompt":"what is machine learning"}
+2025-11-28 23:10:51.168 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response status: 200
+2025-11-28 23:10:51.169 [main] INFO  c.m.v.embedding.OllamaEmbeddings - 🔍 DEBUG: Response body: {"embedding":[0.07008132338523865,0.5978232622146606,-0.7564514875411987,-0.8924013376235962,0.9963018298149109,0.028588365763425827,0.04610715061426163,-0.4910370409488678,-0.1630004197359085,0.8607981204986572,-0.07229398190975189,-0.04659643396735191,-0.4925107955932617,-0.14802886545658112,-0.35581934452056885,0.16541564464569092,-0.40003374218940735,-0.6416851878166199,-0.10757320374250412,-0.0638836920261383,-0.5431179404258728,0.5726048350334167,-0.4939974844455719,-0.6101315021514893,-0.
+2025-11-28 23:10:51.187 [main] INFO  c.m.v.vectordb.ChromaDBClient - Querying collection: knowledge_base (top 3)
+2025-11-28 23:10:51.208 [main] ERROR c.m.voiceassistant.rag.RAGPipeline - Error in RAG pipeline
+java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8000
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBClient.getCollectionInfo(ChromaDBClient.java:121)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBClient.getCollectionId(ChromaDBClient.java:135)
+	at com.mohnish.voiceassistant.vectordb.ChromaDBClient.query(ChromaDBClient.java:190)
+	at com.mohnish.voiceassistant.vectordb.VectorStore.search(VectorStore.java:80)
+	at com.mohnish.voiceassistant.rag.RAGPipeline.answer(RAGPipeline.java:87)
+	at com.mohnish.voiceassistant.rag.RAGPipeline.answer(RAGPipeline.java:70)
+	at com.mohnish.voiceassistant.VoiceAssistant.processVoiceInteraction(VoiceAssistant.java:372)
+	at com.mohnish.voiceassistant.VoiceAssistant.startManualMode(VoiceAssistant.java:324)
+	at com.mohnish.voiceassistant.VoiceAssistant.main(VoiceAssistant.java:530)
+	Suppressed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:8000
+		... 25 common frames omitted
+	Caused by: java.net.ConnectException: Connection refused
+		at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+		at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+		at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+		at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+		at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+		at java.base/java.net.Socket.connect(Socket.java:751)
+		at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+		at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+		... 24 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:128)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+	... 24 common frames omitted
+2025-11-28 23:10:51.212 [main] INFO  c.m.v.audio.MacOSTTSEngine - Speaking: 'I'm sorry, I encountered an error while processing your question: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8000'
+2025-11-28 23:11:02.507 [main] INFO  c.m.v.audio.MacOSTTSEngine - TTS completed successfully
+2025-11-28 23:11:04.879 [Thread-0] INFO  c.m.voiceassistant.VoiceAssistant - Cleaning up resources...
+2025-11-28 23:11:04.887 [Thread-0] INFO  c.m.v.audio.MicrophoneCapture - Microphone closed
+2025-11-28 23:11:04.897 [Thread-0] INFO  c.m.v.audio.MacOSSTTEngine - STT Engine closed
+2025-11-28 23:11:04.897 [Thread-0] INFO  c.m.voiceassistant.VoiceAssistant - Cleanup complete
+2025-11-28 23:12:39.940 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 23:12:39.941 [main] INFO  c.m.v.utils.ConfigLoader - ✅ Loaded config from: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/assistant.properties
+2025-11-28 23:12:39.942 [main] INFO  c.m.v.utils.ConfigLoader - 🔑 Loaded Picovoice key from /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/secrets.properties
+2025-11-28 23:12:39.943 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 23:12:39.943 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:12:39.943 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 23:12:39.943 [main] ERROR c.m.v.wakeword.WakeWordTest - Wake word model file not found: /Users/mohnishsinghyadav/Projects/voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:16:12.379 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 23:16:12.381 [main] INFO  c.m.v.utils.ConfigLoader - ✅ Loaded config from: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/assistant.properties
+2025-11-28 23:16:12.382 [main] INFO  c.m.v.utils.ConfigLoader - 🔑 Loaded Picovoice key from /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/secrets.properties
+2025-11-28 23:16:12.382 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 23:16:12.382 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: voice-assistant/voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:16:12.382 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 23:16:12.383 [main] ERROR c.m.v.wakeword.WakeWordTest - Wake word model file not found: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:17:18.798 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 23:17:18.801 [main] INFO  c.m.v.utils.ConfigLoader - ✅ Loaded config from: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/assistant.properties
+2025-11-28 23:17:18.801 [main] INFO  c.m.v.utils.ConfigLoader - 🔑 Loaded Picovoice key from /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/secrets.properties
+2025-11-28 23:17:18.802 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 23:17:18.802 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:17:18.802 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 23:17:18.802 [main] INFO  c.m.v.wakeword.WakeWordTest - ✅ Wake word file found!
+2025-11-28 23:17:18.804 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Initializing Porcupine...
+2025-11-28 23:17:19.651 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Porcupine initialized.
+2025-11-28 23:17:19.651 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Sample Rate  : 16000
+2025-11-28 23:17:19.651 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Frame Length : 512
+2025-11-28 23:17:19.651 [main] INFO  c.m.v.wakeword.WakeWordTest - 
+🎤 Listening for wake word...
+2025-11-28 23:17:19.652 [main] INFO  c.m.v.wakeword.WakeWordTest - Say: 'samantha en mac v3 0 0'
+2025-11-28 23:17:19.652 [main] INFO  c.m.v.wakeword.WakeWordTest - Press Ctrl+C to exit
+
+2025-11-28 23:17:19.653 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Listening for wake word: samantha_en_mac_v3_0_0
+2025-11-28 23:17:19.955 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone opened.
+2025-11-28 23:17:40.778 [Thread-0] INFO  c.m.v.wakeword.WakeWordTest - 🔻 Shutting down wake word engine...
+2025-11-28 23:17:40.778 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Stopping wake-word listener...
+2025-11-28 23:17:40.795 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone closed (listening stopped).
+2025-11-28 23:17:40.795 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Wake-word listener stopped.
+2025-11-28 23:17:40.795 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Releasing PorcupineWakeWord resources...
+2025-11-28 23:17:40.796 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - PorcupineWakeWord released.
+2025-11-28 23:18:15.746 [main] INFO  c.m.v.wakeword.WakeWordTest - === Wake Word Detection Test ===
+2025-11-28 23:18:15.748 [main] INFO  c.m.v.utils.ConfigLoader - ✅ Loaded config from: /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/assistant.properties
+2025-11-28 23:18:15.749 [main] INFO  c.m.v.utils.ConfigLoader - 🔑 Loaded Picovoice key from /Users/mohnishsinghyadav/Projects/voice-assistant/voice-assistant/config/secrets.properties
+2025-11-28 23:18:15.750 [main] INFO  c.m.v.wakeword.WakeWordTest - Access Key: eEQ3ShXIm+...
+2025-11-28 23:18:15.750 [main] INFO  c.m.v.wakeword.WakeWordTest - Keyword Path: voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn
+2025-11-28 23:18:15.750 [main] INFO  c.m.v.wakeword.WakeWordTest - Sensitivity: 0.5
+2025-11-28 23:18:15.750 [main] INFO  c.m.v.wakeword.WakeWordTest - ✅ Wake word file found!
+2025-11-28 23:18:15.751 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Initializing Porcupine...
+2025-11-28 23:18:16.239 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Porcupine initialized.
+2025-11-28 23:18:16.239 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Sample Rate  : 16000
+2025-11-28 23:18:16.239 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Frame Length : 512
+2025-11-28 23:18:16.239 [main] INFO  c.m.v.wakeword.WakeWordTest - 
+🎤 Listening for wake word...
+2025-11-28 23:18:16.239 [main] INFO  c.m.v.wakeword.WakeWordTest - Say: 'samantha en mac v3 0 0'
+2025-11-28 23:18:16.240 [main] INFO  c.m.v.wakeword.WakeWordTest - Press Ctrl+C to exit
+
+2025-11-28 23:18:16.240 [main] INFO  c.m.v.wakeword.PorcupineWakeWord - Listening for wake word: samantha_en_mac_v3_0_0
+2025-11-28 23:18:16.510 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone opened.
+2025-11-28 23:18:30.766 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - 🎤 Wake Word Detected!
+2025-11-28 23:18:30.767 [porcupine-listener] INFO  c.m.v.wakeword.WakeWordTest - 🎤 Wake word detected!
+2025-11-28 23:18:34.858 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - 🎤 Wake Word Detected!
+2025-11-28 23:18:34.859 [porcupine-listener] INFO  c.m.v.wakeword.WakeWordTest - 🎤 Wake word detected!
+2025-11-28 23:18:38.158 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - 🎤 Wake Word Detected!
+2025-11-28 23:18:38.159 [porcupine-listener] INFO  c.m.v.wakeword.WakeWordTest - 🎤 Wake word detected!
+2025-11-28 23:18:40.435 [Thread-0] INFO  c.m.v.wakeword.WakeWordTest - 🔻 Shutting down wake word engine...
+2025-11-28 23:18:40.435 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Stopping wake-word listener...
+2025-11-28 23:18:40.452 [porcupine-listener] INFO  c.m.v.wakeword.PorcupineWakeWord - Microphone closed (listening stopped).
+2025-11-28 23:18:40.452 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Wake-word listener stopped.
+2025-11-28 23:18:40.452 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - Releasing PorcupineWakeWord resources...
+2025-11-28 23:18:40.452 [Thread-0] INFO  c.m.v.wakeword.PorcupineWakeWord - PorcupineWakeWord released.

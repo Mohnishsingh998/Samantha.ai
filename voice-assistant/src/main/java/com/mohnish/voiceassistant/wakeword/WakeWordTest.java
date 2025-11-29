@@ -23,7 +23,7 @@ public class WakeWordTest {
 
             // Load config
             String accessKey = ConfigLoader.getPicovoiceAccessKey();
-            String keywordPath = ConfigLoader.getWakeWordPath();
+            String keywordPath = "voice-assistant/lib/porcupine/samantha_en_mac_v3_0_0.ppn";
             float sensitivity = ConfigLoader.getWakeWordSensitivity();
 
             // Mask access key safely
@@ -43,7 +43,7 @@ public class WakeWordTest {
                 System.out.println("   Expected: " + file.getAbsolutePath());
                 System.out.println("\n📝 To fix this:");
                 System.out.println("   1. Go to: https://console.picovoice.ai/ppn");
-                System.out.println("   2. Train a wake word (e.g., 'Hey Mohnish')");
+                System.out.println("   2. Train a wake word (e.g., 'hey samantha')");
                 System.out.println("   3. Download the .ppn file");
                 System.out.println("   4. Place it in: " + new File(keywordPath).getParent());
                 return;
