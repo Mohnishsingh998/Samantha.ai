@@ -376,8 +376,6 @@ topK = 2  // instead of 3
 ollama pull llama3.2:1b  // smaller, faster
 ```
 
-See [User Guide](docs/USER_GUIDE.md) for detailed troubleshooting.
-
 ---
 
 ## 🗺️ Roadmap
@@ -439,21 +437,6 @@ See [User Guide](docs/USER_GUIDE.md) for detailed troubleshooting.
 - **Bugs Fixed:** 🐛 Too many to count
 - **Learning:** 📚 Immense
 
----
-
-## 🎥 Demo Video
-
-[Coming Soon - Upload to YouTube]
-
-**Demo Script:**
-1. Wake word activation
-2. General knowledge question
-3. Book-based question (RAG)
-4. Follow-up question (context)
-5. Code walkthrough
-
----
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -483,10 +466,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Mohnish Singh Yadav**
 
-- 🌐 Portfolio: [your-portfolio.com](https://your-portfolio.com)
 - 💼 LinkedIn: [@Mohnishsingh](https://www.linkedin.com/in/mohnishsingh-yadav-86916b257/)
 - 🐙 GitHub: [@Mohnishsingh998](https://github.com/Mohnishsingh998)
-- 📧 Email: mohnishsinghyadav@gmail.com
+- 📧 Email: mohnishsingh2226@gmail.com
 
 *"Built this to learn, share to inspire."*
 
